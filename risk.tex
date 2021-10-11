@@ -14,7 +14,7 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{appendix}
 \usepackage{amsmath}
-\usepackage{url, pdflscape, geometry}
+\usepackage{url, lscape, geometry, rotating}
 \usepackage[utf8]{inputenc}
 \usepackage{pdfpages}
 \usepackage[skip=0.5ex]{subcaption}
@@ -54,6 +54,7 @@ This paper provides a literature survey on the vulnerabilities and risks of Bloc
 \\
 \noindent \textbf{JEL Codes: G10, G15, G19}
 \end{abstract}
+
 \pagebreak
 \section{Introduction}
 
@@ -491,7 +492,7 @@ Overall, we think this analysis will not only be useful to the existing particip
 
 \pagebreak
 \bibliography{library}
-\bibliographystyle{apalike}
+\bibliographystyle{apacite}
 \newpage
 
 \appendix
@@ -554,113 +555,114 @@ $H_{1}$              & (Intercept)         & 3.34E-01             & \multicolumn
 \setlength{\tabcolsep}{1pt}
 \begin{tabular}{c|c|c}
 \rowcolor[HTML]{EFEFEF} 
-\textbf{Date}       & \textbf{Amount loss (BTC)} & \textbf{Description}                            \\ \hline
+\textbf{Date} & \textbf{Amount loss (BTC)} & \textbf{Description}                            \\ \hline
 \rowcolor[HTML]{FFFFFF} 
-6/13/2011           & 25,000                     & Early user Allinvain was   hacked               \\
+6/13/2011     & 25,000                     & Early user Allinvain was   hacked               \\
 \rowcolor[HTML]{FFFFFF} 
-6/19/2011           & 2,000                      & MtGox theft - compromised   account             \\
+6/19/2011     & 2,000                      & MtGox theft - compromised   account             \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{6/25/2011}  & \textit{4,019}             & \textit{MyBitcoin theft   - wallet keys hacked} \\
+6/25/2011     & 4,019                      & \textit{MyBitcoin theft   - wallet keys hacked} \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{7/26/2011}  & \textit{17,000}            & \textit{Bitomat loss - Wallet access   lost}    \\
+7/26/2011     & 17,000                     & \textit{Bitomat loss - Wallet access   lost}    \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{7/29/2011} & \textit{78,739} & \textit{MyBitcoin theft - wallet website   hacked}                                \\
+7/29/2011 & 78,739 & \textit{MyBitcoin theft - wallet website   hacked}                                \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{10/6/2011}  & \textit{5,000}             & \textit{Bitcoin7 hack}                          \\
+10/6/2011     & 5,000                      & \textit{Bitcoin7 hack}                          \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{10/28/2011} & \textit{2,609}             & \textit{MtGox loss due to hacking}              \\
+10/28/2011    & 2,609                      & \textit{MtGox loss due to hacking}              \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{3/1/2012}   & \textit{46,653}            & \textit{Linode hacks}                           \\
+3/1/2012      & 46,653                     & \textit{Linode hacks}                           \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{4/13/2012}  & \textit{3,171}             & \textit{Betcoin hack}                           \\
+4/13/2012     & 3,171                      & \textit{Betcoin hack}                           \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{4/27/2012}  & \textit{20,000}            & \textit{Tony76 Silk Road scam}                  \\
+4/27/2012     & 20,000                     & \textit{Tony76 Silk Road scam}                  \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{5/11/2012}  & \textit{18,547}            & \textit{Bitcoinica hack}                        \\
+5/11/2012     & 18,547                     & \textit{Bitcoinica hack}                        \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{7/4/2012}   & \textit{1,853}             & \textit{MtGox hack}                             \\
+7/4/2012      & 1,853                      & \textit{MtGox hack}                             \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{7/13/2012} & \textit{40,000} & \textit{Bitcoinica theft - due to server   hack}                                  \\
+7/13/2012 & 40,000 & \textit{Bitcoinica theft - due to server   hack}                                  \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{7/17/2012}  & \textit{180,819}           & \textit{BST Ponzi scheme}                       \\
+7/17/2012     & 180,819                    & \textit{BST Ponzi scheme}                       \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{7/31/2012}  & \textit{4,500}             & \textit{BTC-e hack}                             \\
+7/31/2012     & 4,500                      & \textit{BTC-e hack}                             \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{9/4/2012}   & \textit{24,086}            & \textit{Bitfloor theft - wallet keys   hacked}  \\
+9/4/2012      & 24,086                     & \textit{Bitfloor theft - wallet keys   hacked}  \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{9/28/2012}  & \textit{9,222}             & \textit{User Cdecker hacked}                    \\
+9/28/2012     & 9,222                      & \textit{User Cdecker hacked}                    \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{10/17/2012} & \textit{3,500}             & \textit{Trojan horse}                           \\
+10/17/2012    & 3,500                      & \textit{Trojan horse}                           \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{12/21/2012} & \textit{18,787}            & \textit{Bitmarket.eu hack}                      \\
+12/21/2012    & 18,787                     & \textit{Bitmarket.eu hack}                      \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{5/10/2013}  & \textit{1,454}             & \textit{Vircurex hack}                          \\
+5/10/2013     & 1,454                      & \textit{Vircurex hack}                          \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{6/10/2013}  & \textit{1,300}             & \textit{PicoStocks hack}                        \\
+6/10/2013     & 1,300                      & \textit{PicoStocks hack}                        \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{10/2/2013}  & \textit{29,655}            & \textit{FBI seizes Silk Road funds}             \\
+10/2/2013     & 29,655                     & \textit{FBI seizes Silk Road funds}             \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{10/25/2013} & \textit{144,336}           & \textit{FBI seizes Silk Road funds}             \\
+10/25/2013    & 144,336                    & \textit{FBI seizes Silk Road funds}             \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{10/26/2013} & \textit{22,000}            & \textit{GBL scam}                               \\
+10/26/2013    & 22,000                     & \textit{GBL scam}                               \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{11/7/2013}  & \textit{4,100}             & \textit{Inputs.io hack}                         \\
+11/7/2013     & 4,100                      & \textit{Inputs.io hack}                         \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{11/12/2013} & \textit{484}               & \textit{Bitcash.cz hack}                        \\
+11/12/2013    & 484                        & \textit{Bitcash.cz hack}                        \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{11/29/2013} & \textit{5,400}             & \textit{Sheep Marketplace hacked \&   closes}   \\
+11/29/2013    & 5,400                      & \textit{Sheep Marketplace hacked \&   closes}   \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{11/29/2013} & \textit{5,896}             & \textit{PicoStocks hack}                        \\
+11/29/2013    & 5,896                      & \textit{PicoStocks hack}                        \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{2/13/2014}  & \textit{4,400}             & \textit{Silk Road 2 hacked}                     \\
+2/13/2014     & 4,400                      & \textit{Silk Road 2 hacked}                     \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{2/25/2014}  & \textit{744,408}           & \textit{MtGox collapse due to hacks   losses}   \\
+2/25/2014     & 744,408                    & \textit{MtGox collapse due to hacks   losses}   \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{3/4/2014}   & \textit{896}               & \textit{Flexcoin hack}                          \\
+3/4/2014      & 896                        & \textit{Flexcoin hack}                          \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{3/4/2014}   & \textit{97}                & \textit{Poloniex hack}                          \\
+3/4/2014      & 97                         & \textit{Poloniex hack}                          \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{3/25/2014}  & \textit{950}               & \textit{CryptoRush hacked}                      \\
+3/25/2014     & 950                        & \textit{CryptoRush hacked}                      \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{10/14/2014} & \textit{3,894}             & \textit{Mintpal hack}                           \\
+10/14/2014    & 3,894                      & \textit{Mintpal hack}                           \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{1/5/2015}   & \textit{18,886}            & \textit{Bitstamp hack}                          \\
+1/5/2015      & 18,886                     & \textit{Bitstamp hack}                          \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{1/28/2015}  & \textit{1,000}             & \textit{796Exchange hack}                       \\
+1/28/2015     & 1,000                      & \textit{796Exchange hack}                       \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{2/15/2015}  & \textit{7,170}             & \textit{BTER hack}                              \\
+2/15/2015     & 7,170                      & \textit{BTER hack}                              \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{2/17/2015}  & \textit{3,000}             & \textit{KipCoin hack}                           \\
+2/17/2015     & 3,000                      & \textit{KipCoin hack}                           \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{5/22/2015}  & \textit{1,581}             & \textit{Bitfiniex hack}                         \\
+5/22/2015     & 1,581                      & \textit{Bitfiniex hack}                         \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{9/15/2015} & \textit{5,000}  & \textit{BitPay phishing scam - hacker   takes over the CEO's accounts and access} \\
+9/15/2015 & 5,000  & \textit{BitPay phishing scam - hacker   takes over the CEO's accounts and access} \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{1/15/2016}  & \textit{11,325}            & \textit{Cryptsy hack}                           \\
+1/15/2016     & 11,325                     & \textit{Cryptsy hack}                           \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{4/7/2016}   & \textit{315}               & \textit{ShapeShift hack}                        \\
+4/7/2016      & 315                        & \textit{ShapeShift hack}                        \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{4/13/2016}  & \textit{154}               & \textit{ShapeShift hack}                        \\
+4/13/2016     & 154                        & \textit{ShapeShift hack}                        \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{5/14/2016}  & \textit{250}               & \textit{Gatecoin hack}                          \\
+5/14/2016     & 250                        & \textit{Gatecoin hack}                          \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{8/2/2016}   & \textit{119,756}           & \textit{Bitfinex hack}                          \\
+8/2/2016      & 119,756                    & \textit{Bitfinex hack}                          \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{10/13/2016} & \textit{2,300}             & \textit{Bitcurex hack}                          \\
+10/13/2016    & 2,300                      & \textit{Bitcurex hack}                          \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{4/22/2017}  & \textit{3,816}             & \textit{Yapizon hack}                           \\
+4/22/2017     & 3,816                      & \textit{Yapizon hack}                           \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{7/12/2017}  & \textit{1,942}             & \textit{AlphaBay admins assets sized by   FBI}  \\
+7/12/2017     & 1,942                      & \textit{AlphaBay admins assets sized by   FBI}  \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{7/20/2017}  & \textit{1,200}             & \textit{Hansas funds seized by Dutch   police}  \\
+7/20/2017     & 1,200                      & \textit{Hansas funds seized by Dutch   police}  \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{12/6/2017}  & \textit{4,736}             & \textit{NiceHash hacked}                        \\
+12/6/2017     & 4,736                      & \textit{NiceHash hacked}                        \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{6/20/2018}  & \textit{2,016}             & \textit{Bithumb hacked}                         \\
+6/20/2018     & 2,016                      & \textit{Bithumb hacked}                         \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{9/20/2018}  & \textit{5,966}             & \textit{Zaif hacked}                            \\
+9/20/2018     & 5,966                      & \textit{Zaif hacked}                            \\
 \rowcolor[HTML]{FFFFFF} 
-\textit{10/28/2018} & \textit{8}                 & \textit{MapleChange hack / scam}               
+10/28/2018    & 8                          & \textit{MapleChange hack / scam}               \\
+\hline
 \end{tabular}
 \end{table}
 
