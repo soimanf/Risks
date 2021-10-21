@@ -10,7 +10,7 @@
 \usepackage{multicol, multirow}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{setspace}
-\usepackage{tabulary}
+\usepackage{tabulary,tabularx}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{appendix}
 \usepackage{amsmath}
@@ -20,6 +20,7 @@
 \usepackage[skip=0.5ex]{subcaption}
 \usepackage[singlelinecheck=false]{caption}
 
+\usepackage{rotating} % Rotating table
 
 \usepackage{color,svgcolor}
 \usepackage[plainpages=true,verbose]{hyperref}
@@ -174,148 +175,141 @@ Some other notable examples of attacks at this level, are: the \underline{Random
 
 A summary of all technological risks discussed above will be presented in Table \ref{tec}.
 
-\begin{landscape}
-\begin{table}[!h]
+
+\newcommand{\spheading}[2][10em]{% \spheading[<width>]{<stuff>}
+  \rotatebox{90}{\parbox{#1}{\raggedright #2}}}
+
+
+%\begin{landscape}
+\begin{sidewaystable}[htbp]
 \centering
 \small
 \caption{\label{tec}\textbf{Summary of technological risks}}
-\resizebox{1.65\textwidth}{!}{
-\begin{tabular}{|c|lp{1in}p{1in}}
+%\resizebox{1.65\textwidth}{!}{
+\begin{tabulary}{\linewidth}{p{25pt}|L|p{200pt}p{175pt}}
+%\begin{tabularx}{\textwidth}{|c|lXX}
 \hline
  &
-  \multicolumn{1}{c}{\textbf{Risk}} &
-  \multicolumn{1}{c}{\textbf{Consequences}} &
-  \multicolumn{1}{c}{\textbf{Exposure}} \\ \hline
+  {\textbf{Risk}} &
+  {\textbf{Consequences}} &
+  {\textbf{Exposure}} \\ \hline
+\rowcolor[HTML]{FFFFFF} 
+{\multirow{7}{*}{\rotatebox[origin=r]{90}{\cellcolor[HTML]{FFFFFF}\textbf{Consensus level attack}}}} &
+ {{\cellcolor[HTML]{EFEFEF}\textbf{Nothing   at stake attack}}} &
+ {\cellcolor[HTML]{EFEFEF}\textit{· Manipulates the system by entering
+     invalid data  \mbox{· Monopolized consensus process}}} &
+  {{\cellcolor[HTML]{EFEFEF}\textit{Blockchains using PoS (over 400 cryptocurrencies\footnote{The total number of cryptocurrencies is over 2500 \citep{CryptoSlate.com2020}}) source:\citep{CryptoSlate.com2020}}}}
+ \\
+&
+  {\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{·  Manipulates the system}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{Blockchains using PoW consensus (over 500   cryptocurrencies);}} \\
+ &
+  {\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{·  Monopolized consensus process}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{Blockchains using PoS (over 400 cryptocurrencies) source:\citep{CryptoSlate.com2020}}} \\
+ &
+  {\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{· Enters invalid data in the system}} &
+  {\cellcolor[HTML]{FFFFFF}} \\
+ &
+  {\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{· Forks the Blockchain}} &
+  {\multirow{-2}{*}{\cellcolor[HTML]{FFFFFF}\textit{Mining pools\footnote{The total number of mining pools is not known, as there are many which keep their identity secret. Therefore, we cannot accurately assess the market exposure with this respect.}}}} \\
+ &
+  {\multirow{-5}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Majority attack}}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{·          Performs other attacks (Eclipse, double spending, DoS)}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{}} \\ \hline
+&
+  {\cellcolor[HTML]{EFEFEF}} &
+  {\cellcolor[HTML]{EFEFEF}\textit{·            Manipulates the system by entering invalid or big   flow of data}} &
+  {\cellcolor[HTML]{EFEFEF}\textit{All Blockchains (small ones most exposed)}} \\
 \rowcolor[HTML]{EFEFEF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{· Manipulates the system by entering invalid data}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}} \\
+{\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{EFEFEF}} &
+  {\cellcolor[HTML]{EFEFEF}\textit{·          Disrupts the normal operation process}} &
+  {\cellcolor[HTML]{EFEFEF}\textit{Mining pools}} \\
+ &
+  {\multirow{-3}{*}{\cellcolor[HTML]{EFEFEF}\textbf{DDoS   attack}}} &
+  {\cellcolor[HTML]{EFEFEF}\textit{·          Knocks out part of or the whole network}} &
+  {\cellcolor[HTML]{EFEFEF}\textit{Exchange platforms}} \\
+\rowcolor[HTML]{FFFFFF} 
+{\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{·            Manipulates the system}} &
+  {\cellcolor[HTML]{FFFFFF}} \\
+\rowcolor[HTML]{FFFFFF} 
+{\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{·          Monopolized consensus process}} &
+  {\cellcolor[HTML]{FFFFFF}} \\
+\rowcolor[HTML]{FFFFFF} 
+{\cellcolor[HTML]{FFFFFF}} &
+  {\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Sybil   attack}}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{·          Enters invalid data in the system}} &
+  {\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textit{Permissionless   Blockchains}}} \\
 \rowcolor[HTML]{EFEFEF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{EFEFEF}\textbf{Nothing   at stake attack}}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{·          Monopolized consensus process}} &
-  \multicolumn{1}{l|}{\multirow{-2}{*}{\cellcolor[HTML]{EFEFEF}\textit{Blockchains using PoS (over 400 cryptocurrencies\footnote{The total number of cryptocurrencies is over 2500 \citep{CryptoSlate.com2020}}) source:\citep{CryptoSlate.com2020}}}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{·  Manipulates the system}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{Blockchains using PoW consensus (over 500   cryptocurrencies);}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{·  Monopolized consensus process}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{Blockchains using PoS (over 400 cryptocurrencies) source:\citep{CryptoSlate.com2020}}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{· Enters invalid data in the system}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{· Forks the Blockchain}} &
-  \multicolumn{1}{l|}{\multirow{-2}{*}{\cellcolor[HTML]{FFFFFF}\textit{Mining pools\footnote{The total number of mining pools is not known, as there are many which keep their identity secret. Therefore, we cannot accurately assess the market exposure with this respect.}}}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\multirow{-7}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Consensus level attack}}} &
-  \multicolumn{1}{c|}{\multirow{-5}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Majority attack}}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{·          Performs other attacks (Eclipse, double spending, DoS)}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{}} \\ \hline
+{\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{EFEFEF}} &
+  {\cellcolor[HTML]{EFEFEF}\textit{·            Manipulates the system}} &
+  {\cellcolor[HTML]{EFEFEF}} \\
 \rowcolor[HTML]{EFEFEF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{·            Manipulates the system by entering invalid or big   flow of data}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{All Blockchains (small ones most exposed)}} \\
+{\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{EFEFEF}} &
+  {\cellcolor[HTML]{EFEFEF}\textit{·          Monopolized consensus process}} &
+  {\cellcolor[HTML]{EFEFEF}} \\
 \rowcolor[HTML]{EFEFEF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{·          Disrupts the normal operation process}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{Mining pools}} \\
+{\multirow{-9}{*}{\rotatebox[origin=c]{90}{\cellcolor[HTML]{FFFFFF}\textbf{Network level attack}}}} &
+  {\multirow{-3}{*}{\cellcolor[HTML]{EFEFEF}\textbf{Eclipse attack}}} &
+  {\cellcolor[HTML]{EFEFEF}\textit{·          Enters invalid data in the system}} &
+  {\multirow{-3}{*}{\cellcolor[HTML]{EFEFEF}\textit{Permissionless   Blockchains}}} \\ \hline
+\rowcolor[HTML]{FFFFFF} 
+{\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{·            Steals the cryptographic keys}} &
+  {\cellcolor[HTML]{FFFFFF}} \\
+\rowcolor[HTML]{FFFFFF} 
+{\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{·          Takes the control of the afferent funds}} &
+  {\cellcolor[HTML]{FFFFFF}} \\
+\rowcolor[HTML]{FFFFFF} 
+{\multirow{7}{*}{\cellcolor[HTML]{FFFFFF}\spheading[50pt]{\textbf{Cryptographic key threats}}}} &
+  {\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Wallet attack}}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{·          Deters the security and trust of the users}} &
+  {\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textit{All Blockchains}}} \\
+ &
+  {\cellcolor[HTML]{EFEFEF}\textbf{Random   number generator attack}} &
+  {\cellcolor[HTML]{EFEFEF}\textit{Corrupts the cryptographic   keys \& crypto wallets}} &
+  {\cellcolor[HTML]{EFEFEF}\textit{All Blockchains}} \\
+ &
+  {\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{·            Corrupts the cryptographic keys \& crypto   wallets}} &
+  {\cellcolor[HTML]{FFFFFF}} \\
+ &
+  {\cellcolor[HTML]{FFFFFF}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{·          Forges hashing functions \& digital signatures}} &
+  {\cellcolor[HTML]{FFFFFF}} \\
+&
+  {\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Quantum attacks}}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{·          Rewrites Blockchain and manipulation of the network}} &
+  {\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textit{All Blockchains}}} \\ \hline
 \rowcolor[HTML]{EFEFEF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\multirow{-3}{*}{\cellcolor[HTML]{EFEFEF}\textbf{DDoS   attack}}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{·          Knocks out part of or the whole network}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{Exchange platforms}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{·            Manipulates the system}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{·          Monopolized consensus process}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Sybil   attack}}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{·          Enters invalid data in the system}} &
-  \multicolumn{1}{l|}{\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textit{Permissionless   Blockchains}}} \\
-\rowcolor[HTML]{EFEFEF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{·            Manipulates the system}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}} \\
-\rowcolor[HTML]{EFEFEF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{·          Monopolized consensus process}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}} \\
-\rowcolor[HTML]{EFEFEF} 
-\multicolumn{1}{|c|}{\multirow{-9}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Network level attack}}} &
-  \multicolumn{1}{c|}{\multirow{-3}{*}{\cellcolor[HTML]{EFEFEF}\textbf{Eclipse attack}}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{·          Enters invalid data in the system}} &
-  \multicolumn{1}{l|}{\multirow{-3}{*}{\cellcolor[HTML]{EFEFEF}\textit{Permissionless   Blockchains}}} \\ \hline
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{·            Steals the cryptographic keys}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{·          Takes the control of the afferent funds}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Wallet attack}}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{·          Deters the security and trust of the users}} &
-  \multicolumn{1}{l|}{\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textit{All Blockchains}}} \\
-\rowcolor[HTML]{EFEFEF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\textbf{Random   number generator attack}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{Corrupts the cryptographic   keys \& crypto wallets}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{All Blockchains}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{·            Corrupts the cryptographic keys \& crypto   wallets}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{·          Forges hashing functions \& digital signatures}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\multirow{-7}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Cryptographic key threats}}} &
-  \multicolumn{1}{c|}{\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Quantum attacks}}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{·          Rewrites Blockchain and manipulation of the network}} &
-  \multicolumn{1}{l|}{\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textit{All Blockchains}}} \\ \hline
-\rowcolor[HTML]{EFEFEF} 
-\multicolumn{1}{|c|}{\cellcolor[HTML]{FFFFFF}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\textbf{Reentrancy   attack}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{Manipulates the network   \& spends unlimited}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}\textit{Blockchains   supporting smart contracts (over 50 cryptocurrencies) Source:\citep{CryptoSlate.com2020}}} \\
-\rowcolor[HTML]{FFFFFF} 
-\multicolumn{1}{|c|}{\multirow{-2}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Smart contract threats}}} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}\textbf{Smart contract attack}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{Misleads the technology’s application}} &
-  \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}\textit{Blockchains supporting smart contracts (over 50 cryptocurrencies) Source:\citep{CryptoSlate.com2020}}} \\ \hline
-\end{tabular}
-}
-\end{table}
+{\multirow{2}{*}{\cellcolor[HTML]{FFFFFF}\spheading[50pt]{\textbf{Smart
+        contract threats}}}}
+ &
+  {\cellcolor[HTML]{EFEFEF}\textbf{Reentrancy   attack}} &
+  {\cellcolor[HTML]{EFEFEF}\textit{Manipulates the network   \& spends unlimited}} &
+  {\cellcolor[HTML]{EFEFEF}\textit{Blockchains   supporting smart contracts (over 50 cryptocurrencies) Source:\citep{CryptoSlate.com2020}}} \\
+ &
+  {\cellcolor[HTML]{FFFFFF}\textbf{Smart contract attack}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{Misleads the technology’s application}} &
+  {\cellcolor[HTML]{FFFFFF}\textit{Blockchains supporting smart contracts (over 50 cryptocurrencies) Source:\citep{CryptoSlate.com2020}}} \\ \hline
+\end{tabulary}
+%}
+\end{sidewaystable}
 
-\end{landscape}
+%\end{landscape}
 
 
 
