@@ -154,7 +154,7 @@ awareness \citep{Saad2019, Canh2019, Lemieux2016, Gazali2018,
 Consequently, following the review of the existing literature, we
 claim that there is a need for further research on risks and
 vulnerabilities of the crypto-market. 
-\todoJGD{No we do not ``claim'', we propose something differentor not
+\todoJGD{No we do not ``claim'', we propose something different or not
   yet done}
 Compared to previous papers,
 where risks were usually treated based on their nature (i.e. economic,
@@ -784,7 +784,9 @@ knowledge and make informed and effective decisions
 and interpret information, eventually reflecting in decisional
 processes \citep{DeBondt2008}), concepts, as important factors in the
 way the market evolves. Market signals can be complex, including both
-information and noise \citep{Rizzi2008}. Less mysterious than at the
+information and noise \citep{Rizzi2008}.
+\todoJGD{Rizzi2008 not defined}
+ Less mysterious than at the
 beginning, however, still significantly complicated, the Blockchain
 world might pose some problems in understanding. Blockchain illiteracy
 leads to irrational behavior, which eventually reflects in inefficient
@@ -1149,8 +1151,8 @@ We compute the monthly standard deviation of bitcoin’s returns as:
 $$ \sigma = \sqrt{\frac{(R - \mu)^2}{n}}$$
 
 Where, R are bitcoin returns, $\mu$ is the average return and n is the number of days of the window considered. Accordingly with our hypotheses, we perform the following linear regression:
- $$ \sigma = \alpha + \beta * EVENT_{number} + \epsilon   $$
- $$ \sigma = \alpha + \beta * EVENT_{amount} + \epsilon   $$
+$$ \sigma = \alpha_n + \beta_n * EVENT_{number} + \epsilon_n   $$
+$$ \sigma = \alpha_a + \beta_a * EVENT_{amount} + \epsilon_a   $$
 
 Where, $EVENT_{number}$ is is the variable representing the monthly
 volume of events targeting bitcoin and $EVENT_{amount}$ is the monthly
@@ -1159,7 +1161,9 @@ amounts lost, in bitcoins, due to these events.\\
 
 The first regression checks if there is a relationship between the
 monthly volatility of bitcoin and the number of events per month. The
-results obtained are significant, with a p value of 0.0216. We
+results obtained are significant, with a p value of 0.0216.
+\todoJGD{define p}
+ We
 therefore conclude that our sample data provided enough evidence to
 reject the null hypothesis; these results show that there is a
 relationship between the monthly volatility of bitcoin and the number
@@ -1217,7 +1221,7 @@ more secure and transparent alternative to the existing payment
 tools. However, that doesn’t make it immune to cyberattacks and
 scams. At the same time, we argue that Blockchain illiteracy may have
 an important implication in how crypto-market players behave.
-
+\todoJGD{we argue ? is it a fact or are there evidence?}
 
 
 \section{Conclusion}
@@ -1325,9 +1329,9 @@ regulation was in place, we also consider this an area of further
 research.
   \end{enumerate}
 
-Overall, we think this analysis will not only be useful to the
-existing participants but also to those considering to enter this
-market, them being practitioners or academics. \\
+Overall, we think this analysis could also be useful not only to the existing
+participants but to those considering to enter this 
+market as well, them being practitioners or academics. \\
 
 
 \pagebreak
@@ -1337,7 +1341,7 @@ market, them being practitioners or academics. \\
 
 \appendix
 \section{Appendix}
-\todoJGD{provide me with means to reproduce these tables for myself}
+\todoJGD{provide me here (in the captions?)  with means to reproduce these tables for myself}
 \begin{table}[ht]
 \centering
 \caption{\label{reg1}\textbf{Linear regression 1}\\ \footnotesize{\textit{Summary of the OLS regression used to identify the relationship between monthly volatility and the number of events targeting bitcoin.}}}
