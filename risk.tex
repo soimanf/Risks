@@ -22,6 +22,9 @@
 
 \usepackage{rotating} % Rotating table
 
+\usepackage[colorinlistoftodos]{todonotes}
+\newcommand{\TODO}[2][]{\todo[inline,color=blue!10,size=\footnotesize,#1]{\textbf{TODO}: #2}}
+\newcommand{\todoJGD}[2][]\todo[inline,size=\footnotesize,author=JGD,color=green!50, #1]{#2}}
 \usepackage{color,svgcolor}
 \usepackage[plainpages=true,verbose]{hyperref}
 \makeatletter
@@ -95,14 +98,14 @@ global distributed, open and transparent database, which stores and
 transfers information of any kind (money, art, science, titles, votes,
 etc.) has the potential to create new foundations for the economy and
 business sector. Blockchain might be a complex technology, but the
-concept behind it is very simple \citep{Tapscott2016, Iansiti2017}.
+concept behind it is quite simple \citep{Tapscott2016, Iansiti2017}.
 
 
 Inspired from the existing systems and technologies, the solutions
 promised by Blockchain seem to be far beyond what we have already
 seen. Little by little, Blockchain is taking over many sectors of the
 economy and a growing number of organizations are declaring their
-enthusiasm and interest in using it \citep{Collomb2016}.Given the
+enthusiasm and interest in using it \citep{Collomb2016}. Given the
 spread of Blockchain-based solutions across various industries and the
 growing interest in using it, there is an urgent need for researchers
 and market participants to gain understanding of what it means to be
@@ -111,7 +114,7 @@ part of the crypto-market.
 
 As previously mentioned, Blockchain needs to overcome a series of
 challenges, before becoming a mainstream technology
-\citep{Wachsman2019}. According to \cite{Iansiti2017},there are two
+\citep{Wachsman2019}. According to \cite{Iansiti2017}, there are two
 dimensions affecting the way technology evolves. The first dimension
 represents novelty, referring to the degree of originality and
 uniqueness in comparison with the existing systems. This dimension
@@ -633,7 +636,7 @@ literacy, as possible tools for assessing risk. Measurement plays an
 important role in management. Up to this point, we have different
 tools to measure financial risks, however, things are not as simple
 when talking about the triggering elements. According to
-\cite{Kaplan1992},if we can’t measure something, then we can’t
+\cite{Kaplan1992}, if we can’t measure something, then we can’t
 properly manage it. Therefore, in this part of the assessment, we
 propose ways to measure the probability that technological
 vulnerabilities may trigger financial risk. \\
