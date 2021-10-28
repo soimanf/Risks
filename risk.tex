@@ -2,7 +2,7 @@
 
 
 % here all the packages
-\usepackage[a4paper, total={6in, 10in}]{geometry} 
+\usepackage[a4paper, total={6in, 10in}]{geometry}
 \usepackage{apacite}
 \usepackage[round,sort,colon]{natbib}
 \usepackage{booktabs,array, graphicx}
@@ -49,7 +49,26 @@ colorlinks=true,
 \author{}
 
 \begin{abstract}
-This paper provides a literature survey on the vulnerabilities and risks of Blockchain technology and the crypto-market. Since their creation, the crypto-market and Blockchain technology are still very much challenged and far from the mainstream adoption. We thus here propose a detailed literature survey focusing on the relationship between technological characteristics and financial risks. Furthermore, to complete this study, we propose ways to determine the likelihood of technological vulnerabilities triggering financial risks. Additionally, we find a significant relationship between Blockchain attacks and cryptocurrency volatility, hence illustrating the relationship between technological vulnerabilities and financial risk. While we take into consideration the existent literature on the vulnerabilities and risks associated with the crypto-market, we cannot ignore the limited work with respect to crypto-fundamentals. Alleviating this gap will require more theoretical models and empirical research that encompass the technological characteristics of this market. Our results are twofold. First, we show an identified continuity between the technological risks and financial ones. Secondly, we find that price stability is disturbed by technological vulnerabilities. 
+This paper provides a literature survey on the vulnerabilities and
+risks of Blockchain technology and the crypto-market. Since their
+creation, the crypto-market and Blockchain technology are still very
+much challenged and far from the mainstream adoption. We thus here
+propose a detailed literature survey focusing on the relationship
+between technological characteristics and financial
+risks. Furthermore, to complete this study, we propose ways to
+determine the likelihood of technological vulnerabilities triggering
+financial risks. Additionally, we find a significant relationship
+between Blockchain attacks and cryptocurrency volatility, hence
+illustrating the relationship between technological vulnerabilities
+and financial risk. While we take into consideration the existent
+literature on the vulnerabilities and risks associated with the
+crypto-market, we cannot ignore the limited work with respect to
+crypto-fundamentals. Alleviating this gap will require more
+theoretical models and empirical research that encompass the
+technological characteristics of this market. Our results are
+twofold. First, we show an identified continuity between the
+technological risks and financial ones. Secondly, we find that price
+stability is disturbed by technological vulnerabilities.
 \\
 \noindent \textbf{Keywords: Blockchain, Risk assessment, Financial risks, Attacks, Literature survey }
 \\
@@ -59,81 +78,263 @@ This paper provides a literature survey on the vulnerabilities and risks of Bloc
 \pagebreak
 \section{Introduction}
 
-Everyone has heard about the enormous potential of the Blockchain technology and the fact that it might revolutionize business models and reinvent the contemporary firms and economies. At the same time, we know that it is still far from keeping all its promises and before that happens, Blockchain has to first overcome its technological, organizational and social barriers \citep{Iansiti2017, Charles2019}. As professor Karim Beddiar said, “The Internet has democratized the information, the Blockchain will democratize the transaction” \footnote{Own translation from original: ” Internet a démocratisé l’information, la Blockchain va démocratiser la transaction” \citep{Charles2019}}, however, there is still a lot of work left for research before that happens and a lot of experience to gain before the technology will mature \citep{Charles2019}. This global distributed, open and transparent database, which stores and transfers information of any kind (money, art, science, titles, votes, etc.) has the potential to create new foundations for the economy and business sector. Blockchain might be a complex technology, but the concept behind it is very simple \citep{Tapscott2016, Iansiti2017}. 
+Everyone has heard about the enormous potential of the Blockchain
+technology and the fact that it might revolutionize business models
+and reinvent the contemporary firms and economies. At the same time,
+we know that it is still far from keeping all its promises and before
+that happens, Blockchain has to first overcome its technological,
+organizational and social barriers \citep{Iansiti2017,
+  Charles2019}. As professor Karim Beddiar said, “The Internet has
+democratized the information, the Blockchain will democratize the
+transaction” \footnote{Own translation from original: ” Internet a
+  démocratisé l’information, la Blockchain va démocratiser la
+  transaction” \citep{Charles2019}}, however, there is still a lot of
+work left for research before that happens and a lot of experience to
+gain before the technology will mature \citep{Charles2019}. This
+global distributed, open and transparent database, which stores and
+transfers information of any kind (money, art, science, titles, votes,
+etc.) has the potential to create new foundations for the economy and
+business sector. Blockchain might be a complex technology, but the
+concept behind it is very simple \citep{Tapscott2016, Iansiti2017}.
 
-Inspired from the existing systems and technologies, the solutions promised by Blockchain seem to be far beyond what we have already seen. Little by little, Blockchain is taking over many sectors of the economy and a growing number of organizations are declaring their enthusiasm and interest in using it \citep{Collomb2016}.Given the spread of Blockchain-based solutions across various industries and the growing interest in using it, there is an urgent need for researchers and market participants to gain understanding of what it means to be part of the crypto-market. 
 
-As previously mentioned, Blockchain needs to overcome a series of challenges, before becoming a mainstream technology \citep{Wachsman2019}. According to \cite{Iansiti2017},there are two dimensions affecting the way technology evolves. The first dimension represents novelty, referring to the degree of originality and uniqueness in comparison with the existing systems. This dimension implies as well the difficulty in seeing the use and innovation of technology. The second dimension refers to complexity, implying the extent to which this technology touches various fields, regardless the market or area of expertise \citep{Iansiti2017, Notheisen2019}. The same idea is sustained by the results obtained in the surveys conducted by Deloitte and Underscore companies. While assessing the Blockchain adoption, they found out that some of the main barriers are: the technological complexity, regulatory issues, lack of in-house skills and understanding, security threats and the uncertain profitability \citep{Pawczuk2019, UnderscoreVC2018}. In 2018, \cite{Gazali2018} explored the relationship between human conduct and the intention to invest in the crypto-market. Consequently, they found out that the attitude towards the crypto-market, the social norms \footnote{decisions are made based on the actual trends and influenced by a mentality such like: “if I lose, at least I am not alone”)}, the risk tolerance and the perceived benefits coming from using this technology, represent some of the main factors influencing the interested parties to invest or be part of the crypto-market.
+Inspired from the existing systems and technologies, the solutions
+promised by Blockchain seem to be far beyond what we have already
+seen. Little by little, Blockchain is taking over many sectors of the
+economy and a growing number of organizations are declaring their
+enthusiasm and interest in using it \citep{Collomb2016}.Given the
+spread of Blockchain-based solutions across various industries and the
+growing interest in using it, there is an urgent need for researchers
+and market participants to gain understanding of what it means to be
+part of the crypto-market.
 
-Regardless the big potential and great innovative solutions brought by Blockchain, this technology gained most of its fame thanks to its vulnerabilities. The cryptocurrencies’ volatility and the numerous cyber-attacks suffered by this technology, represent the main driving factors towards the Blockchain’s popularity. Among the existing research literature, several studies have addressed the crypto-market risks. Some with the aim to find solutions to these vulnerabilities \citep{Bonneau2015, Stewart2018, Ma2018, Goffard2019, Morganti2019, Drljevic2019, Patel2020}, while others just to increase general awareness \citep{Saad2019, Canh2019, Lemieux2016, Gazali2018, Lu2019a}.
 
-Consequently, following the review of the existing literature, we claim that there is a need for further research on risks and vulnerabilities of the crypto-market. Compared to previous papers, where risks were usually treated based on their nature (i.e. economic, political, regulatory, etc.), we intend to provide a parallel analysis of both the financial and technological risks. We show that these risks, regardless their nature, have many characteristics in common. Moreover, we offer ways to determine the likelihood that technological risks could transform into financial ones and provide a short empirical demonstration. 
+As previously mentioned, Blockchain needs to overcome a series of
+challenges, before becoming a mainstream technology
+\citep{Wachsman2019}. According to \cite{Iansiti2017},there are two
+dimensions affecting the way technology evolves. The first dimension
+represents novelty, referring to the degree of originality and
+uniqueness in comparison with the existing systems. This dimension
+implies as well the difficulty in seeing the use and innovation of
+technology. The second dimension refers to complexity, implying the
+extent to which this technology touches various fields, regardless the
+market or area of expertise \citep{Iansiti2017, Notheisen2019}. The
+same idea is sustained by the results obtained in the surveys
+conducted by Deloitte and Underscore companies. While assessing the
+Blockchain adoption, they found out that some of the main barriers
+are: the technological complexity, regulatory issues, lack of in-house
+skills and understanding, security threats and the uncertain
+profitability \citep{Pawczuk2019, UnderscoreVC2018}. In 2018,
+\cite{Gazali2018} explored the relationship between human conduct and
+the intention to invest in the crypto-market. Consequently, they found
+out that the attitude towards the crypto-market, the social norms
+\footnote{decisions are made based on the actual trends and influenced
+  by a mentality such like: “if I lose, at least I am not alone”)},
+the risk tolerance and the perceived benefits coming from using this
+technology, represent some of the main factors influencing the
+interested parties to invest or be part of the crypto-market.
 
-This study is a literature-based research. Compared to other areas, finance is mostly dominated by quantitative type of analysis. However, we believe that a new field of research like the crypto-market, would greatly benefit from such a powerful scrutinizing tool that explores the existing papers and informs the reader about the current state of knowledge. In conducting this research, we have used various types of information, from both academic \footnote{Academic journals, academic theses} and non-academic \footnote{Websites, official reports issued by research or governmental organizations, magazines, etc.} literature. The selection of papers was done by taking into account the topic of investigation, while the afterwards information has been grouped by the types of risk. In our search we have used a big variety of keywords such as: crypto, Blockchain, financial risk, technological risk, attack, financial behavior, Blockchain literacy, etc. With this literature survey, we will answer to the following research question: ‘Can financial risks be triggered by technological vulnerabilities of Blockchain technology?’.
 
-With the aim to enlighten our research problem, the objective of this survey is to provide a two-dimension risk analysis (technological and financial) completed by an assessment of triggering elements (the likelihood). Furthermore, following the example of \cite{Benoit2017} literature survey, we are going to complete this study with a short data analysis. In line with the statements made in the literature review, we show that bitcoin’s price instability (financial risk) can be triggered by the attacks targeting the crypto-market (technological vulnerability).
+Regardless the big potential and great innovative solutions brought by
+Blockchain, this technology gained most of its fame thanks to its
+vulnerabilities. The cryptocurrencies’ volatility and the numerous
+cyber-attacks suffered by this technology, represent the main driving
+factors towards the Blockchain’s popularity. Among the existing
+research literature, several studies have addressed the crypto-market
+risks. Some with the aim to find solutions to these vulnerabilities
+\citep{Bonneau2015, Stewart2018, Ma2018, Goffard2019, Morganti2019,
+  Drljevic2019, Patel2020}, while others just to increase general
+awareness \citep{Saad2019, Canh2019, Lemieux2016, Gazali2018,
+  Lu2019a}.
 
-This paper is organized as follows. Section 2 presents the assessment of technological and financial risks; Section 3 proposes a brief empirical illustration. Section 4 discusses the results and concludes. 
+
+Consequently, following the review of the existing literature, we
+claim that there is a need for further research on risks and
+vulnerabilities of the crypto-market. Compared to previous papers,
+where risks were usually treated based on their nature (i.e. economic,
+political, regulatory, etc.), we intend to provide a parallel analysis
+of both the financial and technological risks. We show that these
+risks, regardless their nature, have many characteristics in
+common. Moreover, we offer ways to determine the likelihood that
+technological risks could transform into financial ones and provide a
+short empirical demonstration.
+
+
+This study is a literature-based research. Compared to other areas,
+finance is mostly dominated by quantitative type of analysis. However,
+we believe that a new field of research like the crypto-market, would
+greatly benefit from such a powerful scrutinizing tool that explores
+the existing papers and informs the reader about the current state of
+knowledge. In conducting this research, we have used various types of
+information, from both academic \footnote{Academic journals, academic
+  theses} and non-academic \footnote{Websites, official reports issued
+  by research or governmental organizations, magazines, etc.}
+literature. The selection of papers was done by taking into account
+the topic of investigation, while the afterwards information has been
+grouped by the types of risk. In our search we have used a big variety
+of keywords such as: crypto, Blockchain, financial risk, technological
+risk, attack, financial behavior, Blockchain literacy, etc. With this
+literature survey, we will answer to the following research question:
+‘Can financial risks be triggered by technological vulnerabilities of
+Blockchain technology?’.
+
+
+With the aim to enlighten our research problem, the objective of this
+survey is to provide a two-dimension risk analysis (technological and
+financial) completed by an assessment of triggering elements (the
+likelihood). Furthermore, following the example of \cite{Benoit2017}
+literature survey, we are going to complete this study with a short
+data analysis. In line with the statements made in the literature
+review, we show that bitcoin’s price instability (financial risk) can
+be triggered by the attacks targeting the crypto-market (technological
+vulnerability).
+
+
+This paper is organized as follows. Section 2 presents the assessment
+of technological and financial risks; Section 3 proposes a brief
+empirical illustration. Section 4 discusses the results and
+concludes.
+
 
 
 \section{Blockchain risks assessment}
 
-In this section we perform a theoretical risk assessment of the crypto-market. The goals of this assessment are:  \\
+In this section we perform a theoretical risk assessment of the
+crypto-market. The goals of this assessment are:  \\
+
  \begin{tabular}{@{$\bullet$ }ll}
 &To understand the vulnerabilities of Blockchain and their possible consequences and impact; \\
 &To offer a broad view to Blockchain stakeholders on possible financial and technological risks.\\
 \end{tabular} \\ \\
-According to \cite{Leemoon2017}, crypto-market’s challenges can be divided into four main areas: 
+According to \cite{Leemoon2017}, crypto-market’s challenges can be divided into four main areas:
 \begin{enumerate}
   \item Technological issues
   \item Financial issues
   \item Policy and legal issues
-  \item Political issues 
+  \item Political issues
 \end{enumerate}
 
-While all four types of risks are indisputably affecting the crypto-market development and slowing its acceptance, we consider that the first two could represent a starting point and a reliable support in designing a better legal framework. At the same time, we believe that all these together could eventually alleviate some of the political issues. That being said, in this study, we tackle the first two categories, leaving the last two for future research. We make a parallel analysis between the technological and financial risks. At this point, we, for instance, intend to help users and investors find the answer to possible questions, such as: “Is this investment / technology safe? What are the risks and vulnerabilities I may encounter?". To the best of our knowledge, this is the first study trying to assess both financial and technological risks in parallel.
+While all four types of risks are indisputably affecting the
+crypto-market development and slowing its acceptance, we consider that
+the first two could represent a starting point and a reliable support
+in designing a better legal framework. At the same time, we believe
+that all these together could eventually alleviate some of the
+political issues. That being said, in this study, we tackle the first
+two categories, leaving the last two for future research. We make a
+parallel analysis between the technological and financial risks. At
+this point, we, for instance, intend to help users and investors find
+the answer to possible questions, such as: “Is this investment /
+technology safe? What are the risks and vulnerabilities I may
+encounter?". To the best of our knowledge, this is the first study
+trying to assess both financial and technological risks in parallel.
 
-The complexity of this technology, inherited by nature, represents a challenge for users, investors and any other participants from this market \citep{Salmela2019}. Highly secure at first sight, Blockchain is not exempt of risks, but is rather an imperfect innovation leaving generous room for many improvements \citep{Iwamura2019}. According to \cite{Swan2017} Blockchain technology is the only one which has the potential to change or, better said, to revolutionize the way businesses and financial markets work. 
 
-According to the latest surveys performed with regards to the factors slowing down the Blockchain’s adoption, the main barriers are: the scalability issues, insufficient regulation, unproven or the debatable value of technology, security threats, lack of in-house skills and uncertain rate of return \citep{UnderscoreVC2018, Pawczuk2019}. As we can observe, most of the mentioned obstacles are either technological or finance related. These findings encourage us to perform a risk assessment and support the necessity of prioritizing the first two categories of risks, namely the financial and technological ones.  
+The complexity of this technology, inherited by nature, represents a
+challenge for users, investors and any other participants from this
+market \citep{Salmela2019}. Highly secure at first sight, Blockchain
+is not exempt of risks, but is rather an imperfect innovation leaving
+generous room for many improvements \citep{Iwamura2019}. According to
+\cite{Swan2017} Blockchain technology is the only one which has the
+potential to change or, better said, to revolutionize the way
+businesses and financial markets work.
+
+
+According to the latest surveys performed with regards to the factors
+slowing down the Blockchain’s adoption, the main barriers are: the
+scalability issues, insufficient regulation, unproven or the debatable
+value of technology, security threats, lack of in-house skills and
+uncertain rate of return \citep{UnderscoreVC2018, Pawczuk2019}. As we
+can observe, most of the mentioned obstacles are either technological
+or finance related. These findings encourage us to perform a risk
+assessment and support the necessity of prioritizing the first two
+categories of risks, namely the financial and technological ones.
+
 
 
 \subsection{Technological risks}
-We here systemize the crypto-market threats in accordance with their nature, namely, consensus level attack, network level attack, cryptographic key attacks and smart contract attacks. There are many types of attacks which are not discussed in this study. However, we tried to cover the most important ones, by taking into account the likelihood, the exposure of the crypto-market to such incidents and the impact they might have. 
+We here systemize the crypto-market threats in accordance with their
+nature, namely, consensus level attack, network level attack,
+cryptographic key attacks and smart contract attacks. There are many
+types of attacks which are not discussed in this study. However, we
+tried to cover the most important ones, by taking into account the
+likelihood, the exposure of the crypto-market to such incidents and
+the impact they might have.
 
-\textbf{Consensus algorithms} for Blockchain technology represent a code-based protocol, aiming to facilitate reaching agreement processes within a network. These algorithms came as a solution to the “Byzantine General Problem”, which concerns the failure of reaching consensus due to faulty actors \citep{Zhang2019}. The most popular and widespread consensus algorithms in the Blockchain technology, are the Proof of Work (PoW), Proof of Stake (PoS) and the Practical Byzantine Fault Tolerance (PBFT) protocols (see Table \ref{consensus}).
+
+\textbf{Consensus algorithms} for Blockchain technology represent a
+code-based protocol, aiming to facilitate reaching agreement processes
+within a network. These algorithms came as a solution to the
+“Byzantine General Problem”, which concerns the failure of reaching
+consensus due to faulty actors \citep{Zhang2019}. The most popular and
+widespread consensus algorithms in the Blockchain technology, are the
+Proof of Work (PoW), Proof of Stake (PoS) and the Practical Byzantine
+Fault Tolerance (PBFT) protocols (see Table \ref{consensus}).
+
 
 
 \begin{table}[h!]
 \centering
 \caption{\textbf{Comparison of most notable consensus mechanisms used in the Blockchain applications}}
 \label{consensus}
-\begin{tabular}{||c c c c||} 
+\begin{tabular}{||c c c c||}
  \hline
-\textbf{Proprieties} & \textbf{PoW} & \textbf{PoS} & \textbf{PBFT}  \\ [0.5ex] 
+\textbf{Proprieties} & \textbf{PoW} & \textbf{PoS} & \textbf{PBFT}  \\ [0.5ex]
  \hline
  \textbf{Blockchain type} & \textit{Permissionless} & \textit{Permissionless} & \textit{Permissioned} \\
 \hline
-  \textbf{Fault Tolerance} & \textit{$<$50\%(of computing power)} & \textit{$<$50\%(of stake)} & \textit{$<$33\%(of faulty nodes)} \\ [1ex] 
+  \textbf{Fault Tolerance} & \textit{$<$50\%(of computing power)} & \textit{$<$50\%(of stake)} & \textit{$<$33\%(of faulty nodes)} \\ [1ex]
  \hline
 \end{tabular}
 
 \end{table}
 
-The most noteworthy \textbf{attacks at the consensus level}, are: 
+The most noteworthy \textbf{attacks at the consensus level}, are:
 
-\underline{Nothing at stake attack:} on the PoS protocol, where low stake owners try to decrease the value of cryptocurrency. Indeed, the control inside the system is given based on the user’s wealth, potentially combined with other factors (coin age-based selection or random factors). Any PoS Blockchain can be exposed to this type of attack, especially in their beginnings, when there are no real imbalances among the users’ wealth and low stake owners will not lose much \citep{Morganti2019}.
+\underline{Nothing at stake attack:} on the PoS protocol, where low
+stake owners try to decrease the value of cryptocurrency. Indeed, the
+control inside the system is given based on the user’s wealth,
+potentially combined with other factors (coin age-based selection or
+random factors). Any PoS Blockchain can be exposed to this type of
+attack, especially in their beginnings, when there are no real
+imbalances among the users’ wealth and low stake owners will not lose
+much \citep{Morganti2019}.
 
-\underline{The majority attack ($>$50\% attack):} means that the consensus protocol is compromised, functioning as a monopolistic system. Taking into account its possible implications, the majority attack is considered also a security issue. Moreover, considering the target type, it can be split in two variants: “the $>$50\% (or 51\%) computational power attack” \footnote{an attack on the PoW protocol, implying the possession of more than 50\% of the total mining power, with the purpose to manipulate and corrupt the network} and “The 51\% stake attack” \footnote{An attack targeting the PoS protocol; it implies the possession of more than 50\% of the total circulating supply of coins (within the same network) with the purpose to gain monopoly power and mislead the system for profit purposes. It is conceptually similar to computational power attack.} \citep{Tuwiner2021, Blockchain.com2020}.
 
-Bitcoin has never experienced a successful majority attack. However, we cannot say the same about altcoins: Feathercoin (June 2013), Bitcoin Gold (May 2018), Vertcoin (December 2018), Ethereum Classic (January 2019) and Bitcoin Cash (May 2019) \citep{Beigel2019}. The difficulty to execute an attack is very much influenced by the size of the Blockchain network. Table \ref{attacks} shows how expensive is to perform a majority attack, depending on the cryptocurrency. These costs are computed taking into account the expenses incurred in the mining process, namely the network hash rate \& the Nicehash cost in BTC /per hour (rented PC power). These values can change every minute, as the cryptos' prices have a big influence \citep{Crypto51.app2020}.
+\underline{The majority attack ($>$50\% attack):} means that the
+consensus protocol is compromised, functioning as a monopolistic
+system. Taking into account its possible implications, the majority
+attack is considered also a security issue. Moreover, considering the
+target type, it can be split in two variants: “the $>$50\% (or 51\%)
+computational power attack” \footnote{an attack on the PoW protocol,
+  implying the possession of more than 50\% of the total mining power,
+  with the purpose to manipulate and corrupt the network} and “The
+51\% stake attack” \footnote{An attack targeting the PoS protocol; it
+  implies the possession of more than 50\% of the total circulating
+  supply of coins (within the same network) with the purpose to gain
+  monopoly power and mislead the system for profit purposes. It is
+  conceptually similar to computational power attack.}
+\citep{Tuwiner2021, Blockchain.com2020}.
+
+
+Bitcoin has never experienced a successful majority attack. However,
+we cannot say the same about altcoins: Feathercoin (June 2013),
+Bitcoin Gold (May 2018), Vertcoin (December 2018), Ethereum Classic
+(January 2019) and Bitcoin Cash (May 2019) \citep{Beigel2019}. The
+difficulty to execute an attack is very much influenced by the size of
+the Blockchain network. Table \ref{attacks} shows how expensive is to
+perform a majority attack, depending on the cryptocurrency. These
+costs are computed taking into account the expenses incurred in the
+mining process, namely the network hash rate \& the Nicehash cost in
+BTC /per hour (rented PC power). These values can change every minute,
+as the cryptos' prices have a big influence \citep{Crypto51.app2020}.
+
 
 \begin{table}[h!]
 \centering
 \caption{\textbf{PoW 51\% attack cost for the top 7 cryptocurrencies.}}
-\begin{tabular}{||c c c ||} 
+\begin{tabular}{||c c c ||}
  \hline
-\textbf{System} & \textbf{Hash rate \footnote{The Hashing power is expressed in different units: TH = TeraHash; MH = MegaHash; KH = KiloHash; GH = GigaHash \citep{CoinGuides.org2020}.}} & \textbf{1 h attack estimated Cost}  \\ [0.5ex] 
+\textbf{System} & \textbf{Hash rate \footnote{The Hashing power is expressed in different units: TH = TeraHash; MH = MegaHash; KH = KiloHash; GH = GigaHash \citep{CoinGuides.org2020}.}} & \textbf{1 h attack estimated Cost}  \\ [0.5ex]
  \hline
  \textbf{Bitcoin} & \textit{114,915 PH/s} & \textit{\$716,072} \\
 \hline
@@ -147,30 +348,127 @@ Bitcoin has never experienced a successful majority attack. However, we cannot s
 \hline
   \textbf{B. SV} & \textit{1,109 PH/s)} & \textit{\$6,912} \\
 \hline
-  \textbf{Dash} & \textit{7 PH/s)} & \textit{\$3,246}  \\ [1ex] 
+  \textbf{Dash} & \textit{7 PH/s)} & \textit{\$3,246}  \\ [1ex]
 \hline
 \end{tabular}
- \\ \footnotesize{\textit{Values computed as per 10th February 2021}} \\ 
+ \\ \footnotesize{\textit{Values computed as per 10th February 2021}} \\
 Source: derived from \cite{Crypto51.app2020}
 \label{attacks}
 \end{table}
 
 
-\textbf{Network level attacks} are widely considered difficult and expensive to perform \citep{Koshik2019}, however, they should never be regarded as impossible.
+\textbf{Network level attacks} are widely considered difficult and
+expensive to perform \citep{Koshik2019}, however, they should never be
+regarded as impossible.
 
-\underline{DDoS (Distributed Denial of Service:} refers to an attack on the host, aiming to disrupt the normal operation process. If for example, the (host) Blockchain system is under attack, it can become unresponsive, unavailable. The system is compromised by being feed with misleading information or big amounts of data \citep{Zhang2019}. DDoS attacks can have a notable impact within the crypto-market, as they can target Blockchains \footnote{The difficulty to execute an attack is very much influenced by the size of Blockchain network. Private Blockchains are considered more exposed compared to the public ones, as they usually grow around just 100 nodes. The adversary needs to control only 33\% of the network to perform an attack, which is easier to achieve in small Blockchains \citep{Saad2019}.}, exchange and trading platforms and even mining pools \citep{Abhishta2019, Litecoinpool.org2020}. These attacks are highly associated with the increase in value and popularity of the cryptocurrencies \citep{Crothers2021}.
 
-Some other notable examples of network level attacks, worth to mention if we take into account the exposure and powerful impact they could have, are the Sybil attack \footnote{a user creates multiple identities and uses them to gain dominance and manipulate the Blockchain system} and the Eclipse attack \footnote{similar to a Sybil attack, Eclipse misleads its victims such as they will see and believe a different truth than the rest of the network}. From our knowledge, there is no Sybil or Eclipse attack successfully performed on the Blockchain technology, in practice, but researchers have made theoretical demonstrations for the Eclipse attacks on both PoW (Ether and Bitcoin) \citep{Heilman2015,Packtpub2019, Marcus2018, Wust2016} and PoS networks \citep{Zhang2019}. Usually, the network level attacks are planned so they can precede other assaults \citep{Morganti2019}. \\
+\underline{DDoS (Distributed Denial of Service:} refers to an attack
+on the host, aiming to disrupt the normal operation process. If for
+example, the (host) Blockchain system is under attack, it can become
+unresponsive, unavailable. The system is compromised by being feed
+with misleading information or big amounts of data
+\citep{Zhang2019}. DDoS attacks can have a notable impact within the
+crypto-market, as they can target Blockchains \footnote{The difficulty
+  to execute an attack is very much influenced by the size of
+  Blockchain network. Private Blockchains are considered more exposed
+  compared to the public ones, as they usually grow around just 100
+  nodes. The adversary needs to control only 33\% of the network to
+  perform an attack, which is easier to achieve in small Blockchains
+  \citep{Saad2019}.}, exchange and trading platforms and even mining
+pools \citep{Abhishta2019, Litecoinpool.org2020}. These attacks are
+highly associated with the increase in value and popularity of the
+cryptocurrencies \citep{Crothers2021}.
 
-\textbf{Cryptographic key attacks.} In Blockchain technology, cryptographic keys give access to funds (through crypto wallets) and play a critical role in transactional processes. In other words, anyone handling the cryptographic keys can access the wallet account and freely manage the associated funds. These keys are stored in crypto wallets. According to the version of crypto wallet used (software, hardware, cloud, brain\footnote{It’s a type of wallet which gives the user the option to generate a key using a password (a word, number, combination of bot, etc.). This type of wallet and keys are considered weak in terms of security.} or paper), the keys are more or less safe (hardware \& paper - most secure, software, brain \& cloud – less secure). Having such a variety of key storage options gives attackers ideas to approach the wallets in different ways.
 
-\underline{Wallet attack:} The main causes behind wallet attacks are system hacking, software vulnerabilities, malwares or incorrect usage from the users’ side. The objective is to obtain (steal) the private key, with which the attacker can mislead the system, perform un-authorized transactions and steal coins (send them into the thief’s wallet using the victim’s private key). Compared to any other types of crypto attacks, the ones targeting the wallets are among the most common and harmful incidents \footnote{In 2018 Coincheck’s wallets were hacked and lost \$530 million worth of NEM. This incident surpasses even the losses of Mt Gox case, being classified as the biggest theft in the crypto history \citep{Shane2018}.}. This statement is also supported by the Blockchain Graveyard organization, as according to their thorough analysis on the incidents associated to Blockchain, more than half relate to wallet attacks \citep{Magoo.github.io2020}.
+Some other notable examples of network level attacks, worth to mention
+if we take into account the exposure and powerful impact they could
+have, are the Sybil attack \footnote{a user creates multiple
+  identities and uses them to gain dominance and manipulate the
+  Blockchain system} and the Eclipse attack \footnote{similar to a
+  Sybil attack, Eclipse misleads its victims such as they will see and
+  believe a different truth than the rest of the network}. From our
+knowledge, there is no Sybil or Eclipse attack successfully performed
+on the Blockchain technology, in practice, but researchers have made
+theoretical demonstrations for the Eclipse attacks on both PoW (Ether
+and Bitcoin) \citep{Heilman2015,Packtpub2019, Marcus2018, Wust2016}
+and PoS networks \citep{Zhang2019}. Usually, the network level attacks
+are planned so they can precede other assaults
+\citep{Morganti2019}. \\
 
-Some other notable examples of attacks at this level, are: the \underline{Random number generator attack} \footnote{targets the weak security of the cryptographic keys, due to insufficient randomness used in their generation process, making them easy to predict  (Independent Security Evaluators, 2019); in spite of the common knowledge that the cryptographic keys are difficult to break, apparently, a combination of weak hashing algorithms and skilled hackers have led to such kind of incidents.} and \underline{Quantum attacks} \footnote{performed with the quantum computers (QC); In the context of Blockchain, they can break the cryptographic keys, corrupt the hashing functions and forge digital signatures. These attacks can have serious implications for the Blockchain network, implying theft of the users’ funds, crypto wallets corruption, dominance over the network and even possible recreation of the entire Blockchain. It is maybe a matter of time, until we will have a QC powerful enough able to break the Blockchain technology \citep{Fernandez-Carames2020, Stewart2018}.} . \\
 
-\textbf{Smart contract attacks} mainly refer to the manipulation of external data entered in the Blockchain (through oracle technology), misleading the execution of the smart contract. The trigger represents information related to external events, which affects the contract’s conditions. The information is manually introduced, reason why, the execution of the system can be easily misled. Blockchain is an open-source technology, giving access to its full code. This is an opportunity for intruders, who may take advantage of this feature and exploit it with malevolent intentions. Concurrently, if the programming language used in the smart contract has weaknesses, this might also create the perfect opportunity for any hacker to initiate a successful attack \citep{Hasanova2019, Atzei2017}.
+\textbf{Cryptographic key attacks.} In Blockchain technology,
+cryptographic keys give access to funds (through crypto wallets) and
+play a critical role in transactional processes. In other words,
+anyone handling the cryptographic keys can access the wallet account
+and freely manage the associated funds. These keys are stored in
+crypto wallets. According to the version of crypto wallet used
+(software, hardware, cloud, brain\footnote{It’s a type of wallet which
+  gives the user the option to generate a key using a password (a
+  word, number, combination of bot, etc.). This type of wallet and
+  keys are considered weak in terms of security.} or paper), the keys
+are more or less safe (hardware \& paper - most secure, software,
+brain \& cloud – less secure). Having such a variety of key storage
+options gives attackers ideas to approach the wallets in different
+ways.
 
-\underline{Re-entrancy attack}, as a variant, refers to a malfunction in the smart contract protocol. During the attack, the hacker is sending multiple requests to the system, as for example, invoking the call function continuously until the gas supply ends. Overwhelmed by the avalanche of orders, the system will perform inaccurately \citep{Hasanova2019}.
+
+\underline{Wallet attack:} The main causes behind wallet attacks are
+system hacking, software vulnerabilities, malwares or incorrect usage
+from the users’ side. The objective is to obtain (steal) the private
+key, with which the attacker can mislead the system, perform
+un-authorized transactions and steal coins (send them into the thief’s
+wallet using the victim’s private key). Compared to any other types of
+crypto attacks, the ones targeting the wallets are among the most
+common and harmful incidents \footnote{In 2018 Coincheck’s wallets
+  were hacked and lost \$530 million worth of NEM. This incident
+  surpasses even the losses of Mt Gox case, being classified as the
+  biggest theft in the crypto history \citep{Shane2018}.}. This
+statement is also supported by the Blockchain Graveyard organization,
+as according to their thorough analysis on the incidents associated to
+Blockchain, more than half relate to wallet attacks
+\citep{Magoo.github.io2020}.
+
+
+Some other notable examples of attacks at this level, are: the
+\underline{Random number generator attack} \footnote{targets the weak
+  security of the cryptographic keys, due to insufficient randomness
+  used in their generation process, making them easy to predict
+  (Independent Security Evaluators, 2019); in spite of the common
+  knowledge that the cryptographic keys are difficult to break,
+  apparently, a combination of weak hashing algorithms and skilled
+  hackers have led to such kind of incidents.} and \underline{Quantum
+  attacks} \footnote{performed with the quantum computers (QC); In the
+  context of Blockchain, they can break the cryptographic keys,
+  corrupt the hashing functions and forge digital signatures. These
+  attacks can have serious implications for the Blockchain network,
+  implying theft of the users’ funds, crypto wallets corruption,
+  dominance over the network and even possible recreation of the
+  entire Blockchain. It is maybe a matter of time, until we will have
+  a QC powerful enough able to break the Blockchain technology
+  \citep{Fernandez-Carames2020, Stewart2018}.} . \\
+
+
+\textbf{Smart contract attacks} mainly refer to the manipulation of
+external data entered in the Blockchain (through oracle technology),
+misleading the execution of the smart contract. The trigger represents
+information related to external events, which affects the contract’s
+conditions. The information is manually introduced, reason why, the
+execution of the system can be easily misled. Blockchain is an
+open-source technology, giving access to its full code. This is an
+opportunity for intruders, who may take advantage of this feature and
+exploit it with malevolent intentions. Concurrently, if the
+programming language used in the smart contract has weaknesses, this
+might also create the perfect opportunity for any hacker to initiate a
+successful attack \citep{Hasanova2019, Atzei2017}.
+
+
+\underline{Re-entrancy attack}, as a variant, refers to a malfunction
+in the smart contract protocol. During the attack, the hacker is
+sending multiple requests to the system, as for example, invoking the
+call function continuously until the gas supply ends. Overwhelmed by
+the avalanche of orders, the system will perform inaccurately
+\citep{Hasanova2019}.
+
 
 
 A summary of all technological risks discussed above will be presented in Table \ref{tec}.
@@ -192,9 +490,9 @@ A summary of all technological risks discussed above will be presented in Table 
  &
   \centering{\textbf{Risk}} &
    \centering{\textbf{Consequences}} &
-   {\textbf{Exposure}}  \\ 
+   {\textbf{Exposure}}  \\
 \hline
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 {\multirow{7}{*}{\rotatebox[origin=r]{90}{\cellcolor[HTML]{FFFFFF}\textbf{Consensus level attack}}}} &
  {{\cellcolor[HTML]{EFEFEF}\textbf{Nothing   at stake attack}}} &
  {\cellcolor[HTML]{EFEFEF}\textit{· Manipulates the system by entering
@@ -225,7 +523,7 @@ A summary of all technological risks discussed above will be presented in Table 
   {\cellcolor[HTML]{EFEFEF}} &
   {\cellcolor[HTML]{EFEFEF}\textit{·            Manipulates the system by entering invalid or big   flow of data}} &
   {\cellcolor[HTML]{EFEFEF}\textit{All Blockchains (small ones most exposed)}} \\
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 {\cellcolor[HTML]{FFFFFF}} &
   {\cellcolor[HTML]{EFEFEF}} &
   {\cellcolor[HTML]{EFEFEF}\textit{·          Disrupts the normal operation process}} &
@@ -234,47 +532,47 @@ A summary of all technological risks discussed above will be presented in Table 
   {\multirow{-3}{*}{\cellcolor[HTML]{EFEFEF}\textbf{DDoS   attack}}} &
   {\cellcolor[HTML]{EFEFEF}\textit{·          Knocks out part of or the whole network}} &
   {\cellcolor[HTML]{EFEFEF}\textit{Exchange platforms}} \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 {\cellcolor[HTML]{FFFFFF}} &
   {\cellcolor[HTML]{FFFFFF}} &
   {\cellcolor[HTML]{FFFFFF}\textit{·            Manipulates the system}} &
   {\cellcolor[HTML]{FFFFFF}} \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 {\cellcolor[HTML]{FFFFFF}} &
   {\cellcolor[HTML]{FFFFFF}} &
   {\cellcolor[HTML]{FFFFFF}\textit{·          Monopolized consensus process}} &
   {\cellcolor[HTML]{FFFFFF}} \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 {\cellcolor[HTML]{FFFFFF}} &
   {\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Sybil   attack}}} &
   {\cellcolor[HTML]{FFFFFF}\textit{·          Enters invalid data in the system}} &
   {\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textit{Permissionless   Blockchains}}} \\
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 {\cellcolor[HTML]{FFFFFF}} &
   {\cellcolor[HTML]{EFEFEF}} &
   {\cellcolor[HTML]{EFEFEF}\textit{·            Manipulates the system}} &
   {\cellcolor[HTML]{EFEFEF}} \\
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 {\cellcolor[HTML]{FFFFFF}} &
   {\cellcolor[HTML]{EFEFEF}} &
   {\cellcolor[HTML]{EFEFEF}\textit{·          Monopolized consensus process}} &
   {\cellcolor[HTML]{EFEFEF}} \\
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 {\multirow{-9}{*}{\rotatebox[origin=c]{90}{\cellcolor[HTML]{FFFFFF}\textbf{Network level attack}}}} &
   {\multirow{-3}{*}{\cellcolor[HTML]{EFEFEF}\textbf{Eclipse attack}}} &
   {\cellcolor[HTML]{EFEFEF}\textit{·          Enters invalid data in the system}} &
   {\multirow{-3}{*}{\cellcolor[HTML]{EFEFEF}\textit{Permissionless   Blockchains}}} \\ \hline
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 {\cellcolor[HTML]{FFFFFF}} &
   {\cellcolor[HTML]{FFFFFF}} &
   {\cellcolor[HTML]{FFFFFF}\textit{·            Steals the cryptographic keys}} &
   {\cellcolor[HTML]{FFFFFF}} \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 {\cellcolor[HTML]{FFFFFF}} &
   {\cellcolor[HTML]{FFFFFF}} &
   {\cellcolor[HTML]{FFFFFF}\textit{·          Takes the control of the afferent funds}} &
   {\cellcolor[HTML]{FFFFFF}} \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 {\multirow{7}{*}{\cellcolor[HTML]{FFFFFF}\spheading[50pt]{\textbf{Cryptographic key threats}}}} &
   {\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Wallet attack}}} &
   {\cellcolor[HTML]{FFFFFF}\textit{·          Deters the security and trust of the users}} &
@@ -295,7 +593,7 @@ A summary of all technological risks discussed above will be presented in Table 
   {\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Quantum attacks}}} &
   {\cellcolor[HTML]{FFFFFF}\textit{·          Rewrites Blockchain and manipulation of the network}} &
   {\multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textit{All Blockchains}}} \\ \hline
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 {\multirow{2}{*}{\cellcolor[HTML]{FFFFFF}\spheading[50pt]{\textbf{Smart
         contract threats}}}}
  &
@@ -317,49 +615,398 @@ A summary of all technological risks discussed above will be presented in Table 
 
 
 \subsection{Financial risks}
- 
- In this section, we give example of several financial risks that can be triggered by technological risks. After detailing how this phenomenon happens and in what kind of circumstances, we propose a conceptual metric, with the purpose to emphasize the likelihood that these technological risks may transform into financial ones. 
- 
-\underline{Determining the likelihood:} The likelihood that the technological risks may transform into financial risks, can be established by taking into account the severity \footnote{Financial loses and investment cost incurred.} effect and probability of occurrence of triggering elements. Here, we will also introduce the concepts financial behavior, responsible investment and Blockchain literacy, as possible tools for assessing risk. Measurement plays an important role in management. Up to this point, we have different tools to measure financial risks, however, things are not as simple when talking about the triggering elements. According to \cite{Kaplan1992},if we can’t measure something, then we can’t properly manage it. Therefore, in this part of the assessment, we propose ways to measure the probability that technological vulnerabilities may trigger financial risk. \\
 
-\textbf{Total market risk.} This is the financial risk arising from high movement in market prices. The most used measure for appraising the total market risk of an asset is the volatility of its market returns. Following the traditional financial theory, the total market risk can be decomposed into the systematic risk and the specific one. If the crypto-market is vulnerable to a risk threating the whole market, this could be a systematic risk. On the other hand, if we consider risks targeting a specific crypto-asset or type of Blockchain, then this could be an example of specific risk \footnote{Specific risk concerns isolated cases (one crypto-asset or a specific group, usually not dominating the market) and has fewer casualties than a systematic risk, which affects a big part of the market or the whole.}.
- 
- From the above list, by taking into consideration the risks’ exposure and their consequential power, we can easily identify several attacks, which may trigger financial risks. For instance, majority attacks (almost half of the total crypto-market is exposed to this risk, plus the mining pools), Sybil and Eclipse attacks (targeting Permissionless Blockchains- the most common and big representatives of this market-), DDoS attack, wallet attack, random number generator attack and quantum attacks (targeting all types of Blockchains) can be considered potential triggers for systematic risk \footnote{risks inherent to the entire market or market segment, reflecting not just the impact of economic, geo-political and financial factors but also the technological vulnerabilities.}. At the same time, if affecting just one type of Blockchain, one cryptocurrency or few casualties such as a mining pool/exchange platform, the same technological can trigger a specific risk. 
- 
- It is well known that the crypto-assets’ price is influenced by regulatory and cybersecurity related events \citep{Corbet2019}. Subsequently, such events influence the investors’ behavior, which is eventually impacting crypto-market’s volatility. It was also proved that cryptocurrencies suffer from contagion effects (herding behavior)\citep{DaGamaSilva2019}. Bitcoin, Ether or any other strong and well-known currency have proved their influence over the evolution of the whole cryptocurrency market. In 2017, when Bitcoin prices skyrocketed and crashed, the rest of the cryptocurrencies followed a similar trend \citep{Antonakakis2019, Pereira2019}. The strong power of influence and the herding behavior present in the crypto-market, represent a trigger for systematic risk. Here, we have the perfect example of how an independent event, initially affecting one currency (specific risk), can eventually transform in a systematic risk \footnote{this was possible through investor’s behavior, which tend to associate Bitcoin‘s image with the one of the whole market.}, impacting the whole market \citep{Jain2019}. It is well known that, systematic risk can be triggered by various factors such as socio-political, economic and any other market-related events. In the crypto-market, we can see that on top of the already existing factors, we have also the technological vulnerabilities as a possible trigger. Under the hypothesis of traditional financial theory, specific risk is diversifiable and is not priced by the market. On the opposite, investors require a risk premium, and thus, higher returns for compensating the systematic risk they incur.
- 
-\underline{Likelihood:} The main triggers for market risks are the cyber-attacks and technological risks. According to Blockchain-Graveyard database of crypto attacks, the most frequent and damaging are the ones on cryptographic keys (about half of the total incidents), followed by application vulnerabilities (security breaches) and protocol issues \citep{Magoo.github.io2020}. As a vicious circle, good financial conditions in the crypto-market can motivate intruders to perform more attacks \citep{Crothers2021}. Eventually, depending on the amplitude of damaged caused, technological risks might transpose into different financial risks. Since attacks are pretty common in the crypto-market and usually imply important financial losses, we state that the likelihood as high. \\
- 
- \textbf{Information risk} risk refers to the imbalance of information spread among the market players. Conceptually speaking, thanks to its features, Blockchain technology represents itself a useful tool in reducing information asymmetry, assuring transparency and trust. However, along the evolution of the crypto-market, these innovations became more complex, challenging investors and users to acknowledge the potential. The novelty and technological nature of the crypto-market may get stakeholders into trouble, as some do not understand it. At the same time, the lack of knowledge and specific skills, sometimes completed by the insufficient information supplied to the public, increases the uncertainty and restrain towards the whole market. 
+ In this section, we give example of several financial risks that can
+ be triggered by technological risks. After detailing how this
+ phenomenon happens and in what kind of circumstances, we propose a
+ conceptual metric, with the purpose to emphasize the likelihood that
+ these technological risks may transform into financial ones.
 
-Compared to any other Blockchain application, initial Coin Offerings (ICO) impose most of the problems regarding the transparency and information asymmetry. The complexity of ICOs’ white paper \footnote{a document describing the technology used in the Blockchain project (ICO). It has the purpose to convince the public that the new crypto-asset offers a good investment opportunity.}, investors’ lack of training and the insufficient regulation, led to manipulation and financial losses for investors. According to the existing literature, most investors in this market, lack the required capabilities to interpret the market’s signals. The discrepancy between traditional market and crypto-market, pushes investors and users towards questionable sources of information such as social media. Here, the selection is based rather on the ‘easy-to-interpret' criteria than quality and credibility. At the same time, the general opinion surrounding the crypto-market seems to influence the players (investors and users), which might take decisions rather based on the social trends (led by a herd mentality \footnote{a “If I am losing, at least I am not losing alone’ mentality – investors might believe that following trends or the majority provides some security and makes losses easier to tolerate \citep{Gazali2018}}.) than rationally. This could explain the inefficiency of the crypto-market, despite the quantity of information available \citep{RuiChen2020, Gazali2018}.
 
-\underline{Likelihood:} Among the most important factors responsible for information risk in the crypto-market, we have the lack of available information (e.g. white / yellow papers, inconsistent data) and insufficient knowledge or understanding for investors and users. Due to the poor regulatory framework, intruders found an opportunity to become rich overnight. They issue low quality crypto-assets, about which there is little information available (incomplete white papers or inconsistent data), and use them to trick the other market players. This risk is behind most of the fraudulent coins or low-quality ICO projects. Reputation might attract more enthusiasts in this market; therefore, we believe that the investors interested in cryptos are pretty various. Here, we introduce the Blockchain literacy (ability to understand the Blockchain related knowledge and make informed and effective decisions \citep{VanRooij2011})and financial behavior (how individuals gather and interpret information, eventually reflecting in decisional processes \citep{DeBondt2008}), concepts, as important factors in the way the market evolves. Market signals can be complex, including both information and noise \citep{Rizzi2008}. Less mysterious than at the beginning, however, still significantly complicated, the Blockchain world might pose some problems in understanding. Blockchain illiteracy leads to irrational behavior, which eventually reflects in inefficient markets. Taking into account the big number of crypto scams and the important financial losses incurred (especially during the Bitcoin bubble 2017-2018 \citep{Zetzsche2019, Liebau2019}), we state that the likelihood for this risk is high. \\
+\underline{Determining the likelihood:} The likelihood that the
+technological risks may transform into financial risks, can be
+established by taking into account the severity \footnote{Financial
+  loses and investment cost incurred.} effect and probability of
+occurrence of triggering elements. Here, we will also introduce the
+concepts financial behavior, responsible investment and Blockchain
+literacy, as possible tools for assessing risk. Measurement plays an
+important role in management. Up to this point, we have different
+tools to measure financial risks, however, things are not as simple
+when talking about the triggering elements. According to
+\cite{Kaplan1992},if we can’t measure something, then we can’t
+properly manage it. Therefore, in this part of the assessment, we
+propose ways to measure the probability that technological
+vulnerabilities may trigger financial risk. \\
 
-\textbf{Liquidity risk.} A market is said to be liquid if an agent can make rapidly some significant trades without creating an important change in the price (small market impact). In other words, in a liquid market, transactions will likely not create a change in the price, but new information will be smoothly incorporated. On the other hand, an illiquid market (most of the time linked to inefficient market), will reflect a large volatility in prices (hence a higher probability of an unfair price), a lower number of investors and lower chances to transact/trade.
 
- Liquidity risk, can be split into three categories: assets liquidity (refers to the interaction between sellers and buyers on the platform and the asset availability on exchanges), exchange liquidity (refers to the interaction between makers and takers concerning the assets’ and the orders’ supply) and market liquidity (encompasses the first two) \citep{Crowell2020}. The most debated factors explaining liquidity in the crypto-market are the price, trading volume, capitalization, fees, hash value (for PoW cryptocurrencies) and the size of the network. Contrary to traditional assets, in the crypto-market, high returns are negatively correlated with liquidity, while a rise in trading volume, market capitalization and volatility are associated with lower liquidity uncertainty \citep{Koutmos2018}. At the same time, liquidity risk is highly correlated with the events concerning cyber-attacks or regulatory issues, as a response to human behavior and investors’ attitude towards this market \citep{Corbet2019}. 
-A liquid market will be stable, showing less volatility and a bigger range of orders to pick from. A stable market in a liquid environment is resistant to possible manipulation, such as whales or group orders, placed with the intention to exploit the price benefits. It is important to mention the fact that liquidity is different from one cryptocurrency to another (the most popular ones are more liquid) as well as from one exchange platform to another. In spite of the many benefits associated with liquidity, illiquid environments can also present some advantages, especially for the traders for this market, which can benefit from new arbitrage opportunities and purchases at discounts \citep{Crowell2020}.
+\textbf{Total market risk.} This is the financial risk arising from
+high movement in market prices. The most used measure for appraising
+the total market risk of an asset is the volatility of its market
+returns. Following the traditional financial theory, the total market
+risk can be decomposed into the systematic risk and the specific
+one. If the crypto-market is vulnerable to a risk threating the whole
+market, this could be a systematic risk. On the other hand, if we
+consider risks targeting a specific crypto-asset or type of
+Blockchain, then this could be an example of specific risk
+\footnote{Specific risk concerns isolated cases (one crypto-asset or a
+  specific group, usually not dominating the market) and has fewer
+  casualties than a systematic risk, which affects a big part of the
+  market or the whole.}.
 
-\underline{Likelihood:} Analyzed from the cryptocurrencies’ (crypto-assets that claim to be ‘money’) perspective, this risk would translate into an impossibility to be transformed in cash. That being said, one of the principal roles of money (being a medium of exchange) has just failed \citep{Greene2018}. There are many triggers behind crypto-assets illiquidity, among which: token supply algorithm, investors’ behavior, available supply, asset usage, fees, exchange platforms failure, etc. As liquidity risk is already well-known in the financial markets (is one of the indicators for market efficiency), we already know tools to measure it (trading volumes, book depth and the bid-ask spread, different liquidity ratios, etc.) \citep{Jain2018}. Similar to traditional securities, crypto-market suffers from illiquidity during extreme price movement period of times \citep{Manahov2020}. A proof of market efficiency, represents the difficulty to manipulate prices. In the crypto-market, specifically concerning bitcoin, it has been observed a significant hoarding behavior. The number of bitcoin whales increasing to the impressive number of more than 2 thousand addresses \footnote{Owning between 1,000 to 10,000 BTC.} \citep{Bitcoin.com2020}. Beside the fact that hoarding implies a significant movement in prices (buy/sell big amounts of crypto-assets), it has important supply implications as in the end, there are little assets available to trade \citep{Manahov2020}. Asset usage plays an important role within this market, as the more people believe the assets has value, the more desirability to trade it. The asset usage perception is increasing along with the acceptance and development of crypto-market. Liquidity is an important characteristic of the market, influencing the investment costs and implicitly the desirability to trade. If we look at this risk from the Bitcoin perspective, we could easily state that liquidity risk is very high. At the same time, by capturing the big picture of the crypto-market, where we have over 2000 crypto-assets available, we state that the likelihood is medium. \\
 
-\textbf{Supply risk} refers to the reserve available of crypto-assets. Some of examples of important supply risk triggers are the loss of cryptographic keys (without which there is no possibility to access the afferent funds), cyber-attacks\footnote{e.g. the coins may stay blocked in the intruder’s account for a while, attempting to avoid the public eye. }, unclaimed rewards \citep{Coinmetrics.com2019}, reputation and the programmed limit of supplies. Not all the cryptocurrencies have a maximum supply limit. For example, cryptocurrencies such as Bitcoin, Ripple, IOTA, Litecoin and many others, have a pre-established limited supply, while coins like Ethereum, Zcash, Monero and others have no such limits. Following Rational Expectation Equilibrium models, the higher the supply uncertainty, the less informative crypto-assets prices will be. In this case, market prices are less efficient and supply risk could thus even lead to an information risk \citep{Collomb2016}. Compared to national currencies, cryptocurrencies (especially bitcoin) were conceived as being less sensitive to the market changes and inflation rate. However, with time we saw that Satoshi’s ‘perfect’ innovation leaves room for further improvement. 
 
-Mainly associated with market inefficiency at users’ and exchange platforms’ cost, the supply risk is affecting the mining and transaction validation processes, as well. Miners are absolutely necessary in a PoW Blockchain performing both transaction validation and coin ‘minting’ functions. For successful work, they are rewarded by the system with an amount of newly created crypto coins. The reward offered by the system, represents a method to create new coins and to increase the available supply of cryptocurrencies. At the same time, rewards are programmed to decrease steadily, until the maximum supply will be reached \citep{Eyal2018}. When this happens, the mining reward will be based only on transactions fees \citep{CryptoLi.st2020}. 
+ From the above list, by taking into consideration the risks’ exposure
+ and their consequential power, we can easily identify several
+ attacks, which may trigger financial risks. For instance, majority
+ attacks (almost half of the total crypto-market is exposed to this
+ risk, plus the mining pools), Sybil and Eclipse attacks (targeting
+ Permissionless Blockchains- the most common and big representatives
+ of this market-), DDoS attack, wallet attack, random number generator
+ attack and quantum attacks (targeting all types of Blockchains) can
+ be considered potential triggers for systematic risk \footnote{risks
+   inherent to the entire market or market segment, reflecting not
+   just the impact of economic, geo-political and financial factors
+   but also the technological vulnerabilities.}. At the same time, if
+ affecting just one type of Blockchain, one cryptocurrency or few
+ casualties such as a mining pool/exchange platform, the same
+ technological can trigger a specific risk.
 
-Keeping in mind the above arguments, we state that the difficulty to create (mine) new cryptocurrency, the supply limits and the expenses incurred during this process, they all have a great impact on the supply imbalances and the final value of the assets.
 
-\underline{Likelihood:} Since market liquidity is driven by the total supply available for trade, we understand that it makes it an important characteristic for market efficiency as well. Among the most notable triggers for supply issues, we have: token supply algorithm, hoarding behavior, loss of keys, wallet attacks, etc. \citep{Coinmetrics.com2019}. If the supply limits are not a risk for all the crypto-assets, it represents a threat at market level, concerning the leader bitcoin. As initially programmed, bitcoin maximum supply is 21 million coins. The already issued coins attain the approximate number of 18 million, supposing that the limit will be reached sometime around 2140 \citep{Ciaian2015}. As we already discussed the negative sides of limited supply (illiquidity and market inefficiency), we will mention now the bright side of this risk. Similar to commodities such as precious metals and natural gas, crypto-assets with limited supply attain high preference (subsequently high value), being regarded as ‘scare’ assets. By just looking at the price and market share of bitcoin, we can obviously observe that the investor’s choices show a specific preference for this coin. In this case, the financial behavior within this market is under the influence of ‘scarcity gives value’ idea \citep{Verhallen1982}. However, this idea of value can bring important investment costs, as investors putting their money into such assets, will consider asking for scarcity premiums on top of the existing ones for other risks \citep{Haase2013}.  By assessing the supply risk at crypto-market level, we state that the likelihood is medium.\\
+ It is well known that the crypto-assets’ price is influenced by
+ regulatory and cybersecurity related events
+ \citep{Corbet2019}. Subsequently, such events influence the
+ investors’ behavior, which is eventually impacting crypto-market’s
+ volatility. It was also proved that cryptocurrencies suffer from
+ contagion effects (herding behavior)\citep{DaGamaSilva2019}. Bitcoin,
+ Ether or any other strong and well-known currency have proved their
+ influence over the evolution of the whole cryptocurrency market. In
+ 2017, when Bitcoin prices skyrocketed and crashed, the rest of the
+ cryptocurrencies followed a similar trend \citep{Antonakakis2019,
+   Pereira2019}. The strong power of influence and the herding
+ behavior present in the crypto-market, represent a trigger for
+ systematic risk. Here, we have the perfect example of how an
+ independent event, initially affecting one currency (specific risk),
+ can eventually transform in a systematic risk \footnote{this was
+   possible through investor’s behavior, which tend to associate
+   Bitcoin‘s image with the one of the whole market.}, impacting the
+ whole market \citep{Jain2019}. It is well known that, systematic risk
+ can be triggered by various factors such as socio-political, economic
+ and any other market-related events. In the crypto-market, we can see
+ that on top of the already existing factors, we have also the
+ technological vulnerabilities as a possible trigger. Under the
+ hypothesis of traditional financial theory, specific risk is
+ diversifiable and is not priced by the market. On the opposite,
+ investors require a risk premium, and thus, higher returns for
+ compensating the systematic risk they incur.
 
-\textbf{Environmental risk.} Known as an energy-gourmet, Blockchain technology represents one of the key players in the fight towards the green transition \citep{Charles2019}. This type of risk concerns specifically the PoW Blockchains, which through their design, require high computational power and a lot of electricity, for functioning purposes. According to recent surveys, the bitcoin network is responsible for using about 0.2\% of the global electricity and emitting as much carbon dioxide emission as the country of Jordan \citep{Irfan2019}. Another important aspect to mention is the increasing number of ICOs, which require Ethereum Blockchain (PoW based) for their smart contract application. According to the current statistics, there are over three hundred thousand ether derived crypto-assets (both active and non-active\footnote{tokens from former ICOs.} tokens) \citep{CryptoSlate.com2020}. We believe that the technological constraints regarding the electricity consumption should receive priority consideration; perhaps very soon, the success of ICO projects and the performance of businesses (using Blockchain technology), will be influenced by the environmental considerations. In the light of current environmental context, there were many attempts to reduce the costs and unnecessary pollution, although no significant progress was made so far \citep{Lasla2020, Saleh2021, Bentov2016, Lepore2020}. The emergence of mining pools, the use of renewable energy (74\% of the used electricity is renewable) and lightning network, the emergence of platforms for renting mining power (e.g. Nicehash), first step towards a greener crypto world. Although, we know that there is a long road until we reach the point of zero-emission power \citep{Irfan2019}. A solution to stimulate a rapid transition to eco-friendly Blockchains, could be the implementation of a tax regime relative to the amount of energy consumed or to the units of carbon emitted per transaction. In this way, the crypto industry could become more aware of its environmental impact, contribute to the domestic economy and hopefully, make an effort to find the best alternative for both the ecosystem and business \citep{Mecca2019, Goodkind2020}. Simultaneously, with the increasing sensitivity of investors to social responsibility of their investment \citep{Brown-Liburd2015}, the assets showing negative environmental externalities may be submitted to boycott from investors. The environmental risk thus translates into a financial risk.
 
-\underline{Likelihood:} We know that during specific economic conditions (pandemics, financial crisis, war, etc.) the stability of financial markets can be highly affected. At the same time, as we learn from the past events, such as the 2008 financial crisis or COVID pandemics, the most performant and least risky investments were the socially responsible ones \citep{Lins2017, Singh2020, Palma-Ruiz2020}. Well-informed market players have concerns regarding the enterprise risk management, financial performance and considerations for the surrounding environments \citep{Ballou2006}. As a strategy to decrease the risk exposure and make safer ‘investment bets’, investors pay careful attention at what kind of assets they put money in and make more socially responsible investments.
+\underline{Likelihood:} The main triggers for market risks are the
+cyber-attacks and technological risks. According to
+Blockchain-Graveyard database of crypto attacks, the most frequent and
+damaging are the ones on cryptographic keys (about half of the total
+incidents), followed by application vulnerabilities (security
+breaches) and protocol issues \citep{Magoo.github.io2020}. As a
+vicious circle, good financial conditions in the crypto-market can
+motivate intruders to perform more attacks
+\citep{Crothers2021}. Eventually, depending on the amplitude of
+damaged caused, technological risks might transpose into different
+financial risks. Since attacks are pretty common in the crypto-market
+and usually imply important financial losses, we state that the
+likelihood as high. \\
 
-Once with the creation of crypto-derivatives and tokenized securities, we can consider that the first step towards a convergence between crypto world and traditional markets was done. Crypto derivatives can now be traded on both exchange platforms and OTC market \citep{DeribitInsights2020}. Brokers can switch from securities to crypto-assets, or trade both. Regarding investment preferences, it was noticed that during turbulent periods and for safety considerations, investors tend to choose financial markets in the favor of crypto-market \citep{Matkovskyy2019}. Taking into account the investors preference for ‘safety bets’ and concerns about environmental and social implications, we believe that a more ecologically oriented Blockchain could significantly change the overall ‘safety’ perception. If this kind of risk doesn’t have direct financial losses, it impacts the investment profitability, increasing the costs\footnote{E.g. A company issuing ICO projects, can be directly affected by the investors’ social considerations, which will reflect in the amount of funds raised or the price/value of their crypto-assets (lower)} for financing. As time passes, investors give more attention to the crypto-market, therefore we consider that for the moment the likelihood is Medium. At the same time, we would like to mention that there are big chances that the likelihood becomes high, if from technological point of view nothing changes. \\
+
+ \textbf{Information risk} risk refers to the imbalance of information
+ spread among the market players. Conceptually speaking, thanks to its
+ features, Blockchain technology represents itself a useful tool in
+ reducing information asymmetry, assuring transparency and
+ trust. However, along the evolution of the crypto-market, these
+ innovations became more complex, challenging investors and users to
+ acknowledge the potential. The novelty and technological nature of
+ the crypto-market may get stakeholders into trouble, as some do not
+ understand it. At the same time, the lack of knowledge and specific
+ skills, sometimes completed by the insufficient information supplied
+ to the public, increases the uncertainty and restrain towards the
+ whole market.
+
+
+Compared to any other Blockchain application, initial Coin Offerings
+(ICO) impose most of the problems regarding the transparency and
+information asymmetry. The complexity of ICOs’ white paper \footnote{a
+  document describing the technology used in the Blockchain project
+  (ICO). It has the purpose to convince the public that the new
+  crypto-asset offers a good investment opportunity.}, investors’ lack
+of training and the insufficient regulation, led to manipulation and
+financial losses for investors. According to the existing literature,
+most investors in this market, lack the required capabilities to
+interpret the market’s signals. The discrepancy between traditional
+market and crypto-market, pushes investors and users towards
+questionable sources of information such as social media. Here, the
+selection is based rather on the ‘easy-to-interpret' criteria than
+quality and credibility. At the same time, the general opinion
+surrounding the crypto-market seems to influence the players
+(investors and users), which might take decisions rather based on the
+social trends (led by a herd mentality \footnote{a “If I am losing, at
+  least I am not losing alone’ mentality – investors might believe
+  that following trends or the majority provides some security and
+  makes losses easier to tolerate \citep{Gazali2018}}.) than
+rationally. This could explain the inefficiency of the crypto-market,
+despite the quantity of information available \citep{RuiChen2020,
+  Gazali2018}.
+
+
+\underline{Likelihood:} Among the most important factors responsible
+for information risk in the crypto-market, we have the lack of
+available information (e.g. white / yellow papers, inconsistent data)
+and insufficient knowledge or understanding for investors and
+users. Due to the poor regulatory framework, intruders found an
+opportunity to become rich overnight. They issue low quality
+crypto-assets, about which there is little information available
+(incomplete white papers or inconsistent data), and use them to trick
+the other market players. This risk is behind most of the fraudulent
+coins or low-quality ICO projects. Reputation might attract more
+enthusiasts in this market; therefore, we believe that the investors
+interested in cryptos are pretty various. Here, we introduce the
+Blockchain literacy (ability to understand the Blockchain related
+knowledge and make informed and effective decisions
+\citep{VanRooij2011})and financial behavior (how individuals gather
+and interpret information, eventually reflecting in decisional
+processes \citep{DeBondt2008}), concepts, as important factors in the
+way the market evolves. Market signals can be complex, including both
+information and noise \citep{Rizzi2008}. Less mysterious than at the
+beginning, however, still significantly complicated, the Blockchain
+world might pose some problems in understanding. Blockchain illiteracy
+leads to irrational behavior, which eventually reflects in inefficient
+markets. Taking into account the big number of crypto scams and the
+important financial losses incurred (especially during the Bitcoin
+bubble 2017-2018 \citep{Zetzsche2019, Liebau2019}), we state that the
+likelihood for this risk is high. \\
+
+
+\textbf{Liquidity risk.} A market is said to be liquid if an agent can
+make rapidly some significant trades without creating an important
+change in the price (small market impact). In other words, in a liquid
+market, transactions will likely not create a change in the price, but
+new information will be smoothly incorporated. On the other hand, an
+illiquid market (most of the time linked to inefficient market), will
+reflect a large volatility in prices (hence a higher probability of an
+unfair price), a lower number of investors and lower chances to
+transact/trade.
+
+
+ Liquidity risk, can be split into three categories: assets liquidity
+ (refers to the interaction between sellers and buyers on the platform
+ and the asset availability on exchanges), exchange liquidity (refers
+ to the interaction between makers and takers concerning the assets’
+ and the orders’ supply) and market liquidity (encompasses the first
+ two) \citep{Crowell2020}. The most debated factors explaining
+ liquidity in the crypto-market are the price, trading volume,
+ capitalization, fees, hash value (for PoW cryptocurrencies) and the
+ size of the network. Contrary to traditional assets, in the
+ crypto-market, high returns are negatively correlated with liquidity,
+ while a rise in trading volume, market capitalization and volatility
+ are associated with lower liquidity uncertainty
+ \citep{Koutmos2018}. At the same time, liquidity risk is highly
+ correlated with the events concerning cyber-attacks or regulatory
+ issues, as a response to human behavior and investors’ attitude
+ towards this market \citep{Corbet2019}.
+
+A liquid market will be stable, showing less volatility and a bigger
+range of orders to pick from. A stable market in a liquid environment
+is resistant to possible manipulation, such as whales or group orders,
+placed with the intention to exploit the price benefits. It is
+important to mention the fact that liquidity is different from one
+cryptocurrency to another (the most popular ones are more liquid) as
+well as from one exchange platform to another. In spite of the many
+benefits associated with liquidity, illiquid environments can also
+present some advantages, especially for the traders for this market,
+which can benefit from new arbitrage opportunities and purchases at
+discounts \citep{Crowell2020}.
+
+
+\underline{Likelihood:} Analyzed from the cryptocurrencies’
+(crypto-assets that claim to be ‘money’) perspective, this risk would
+translate into an impossibility to be transformed in cash. That being
+said, one of the principal roles of money (being a medium of exchange)
+has just failed \citep{Greene2018}. There are many triggers behind
+crypto-assets illiquidity, among which: token supply algorithm,
+investors’ behavior, available supply, asset usage, fees, exchange
+platforms failure, etc. As liquidity risk is already well-known in the
+financial markets (is one of the indicators for market efficiency), we
+already know tools to measure it (trading volumes, book depth and the
+bid-ask spread, different liquidity ratios, etc.)
+\citep{Jain2018}. Similar to traditional securities, crypto-market
+suffers from illiquidity during extreme price movement period of times
+\citep{Manahov2020}. A proof of market efficiency, represents the
+difficulty to manipulate prices. In the crypto-market, specifically
+concerning bitcoin, it has been observed a significant hoarding
+behavior. The number of bitcoin whales increasing to the impressive
+number of more than 2 thousand addresses \footnote{Owning between
+  1,000 to 10,000 BTC.} \citep{Bitcoin.com2020}. Beside the fact that
+hoarding implies a significant movement in prices (buy/sell big
+amounts of crypto-assets), it has important supply implications as in
+the end, there are little assets available to trade
+\citep{Manahov2020}. Asset usage plays an important role within this
+market, as the more people believe the assets has value, the more
+desirability to trade it. The asset usage perception is increasing
+along with the acceptance and development of crypto-market. Liquidity
+is an important characteristic of the market, influencing the
+investment costs and implicitly the desirability to trade. If we look
+at this risk from the Bitcoin perspective, we could easily state that
+liquidity risk is very high. At the same time, by capturing the big
+picture of the crypto-market, where we have over 2000 crypto-assets
+available, we state that the likelihood is medium. \\
+
+
+\textbf{Supply risk} refers to the reserve available of
+crypto-assets. Some of examples of important supply risk triggers are
+the loss of cryptographic keys (without which there is no possibility
+to access the afferent funds), cyber-attacks\footnote{e.g. the coins
+  may stay blocked in the intruder’s account for a while, attempting
+  to avoid the public eye. }, unclaimed rewards
+\citep{Coinmetrics.com2019}, reputation and the programmed limit of
+supplies. Not all the cryptocurrencies have a maximum supply
+limit. For example, cryptocurrencies such as Bitcoin, Ripple, IOTA,
+Litecoin and many others, have a pre-established limited supply, while
+coins like Ethereum, Zcash, Monero and others have no such
+limits. Following Rational Expectation Equilibrium models, the higher
+the supply uncertainty, the less informative crypto-assets prices will
+be. In this case, market prices are less efficient and supply risk
+could thus even lead to an information risk
+\citep{Collomb2016}. Compared to national currencies, cryptocurrencies
+(especially bitcoin) were conceived as being less sensitive to the
+market changes and inflation rate. However, with time we saw that
+Satoshi’s ‘perfect’ innovation leaves room for further improvement.
+
+
+Mainly associated with market inefficiency at users’ and exchange
+platforms’ cost, the supply risk is affecting the mining and
+transaction validation processes, as well. Miners are absolutely
+necessary in a PoW Blockchain performing both transaction validation
+and coin ‘minting’ functions. For successful work, they are rewarded
+by the system with an amount of newly created crypto coins. The reward
+offered by the system, represents a method to create new coins and to
+increase the available supply of cryptocurrencies. At the same time,
+rewards are programmed to decrease steadily, until the maximum supply
+will be reached \citep{Eyal2018}. When this happens, the mining reward
+will be based only on transactions fees \citep{CryptoLi.st2020}.
+
+
+Keeping in mind the above arguments, we state that the difficulty to
+create (mine) new cryptocurrency, the supply limits and the expenses
+incurred during this process, they all have a great impact on the
+supply imbalances and the final value of the assets.
+
+
+\underline{Likelihood:} Since market liquidity is driven by the total
+supply available for trade, we understand that it makes it an
+important characteristic for market efficiency as well. Among the most
+notable triggers for supply issues, we have: token supply algorithm,
+hoarding behavior, loss of keys, wallet attacks,
+etc. \citep{Coinmetrics.com2019}. If the supply limits are not a risk
+for all the crypto-assets, it represents a threat at market level,
+concerning the leader bitcoin. As initially programmed, bitcoin
+maximum supply is 21 million coins. The already issued coins attain
+the approximate number of 18 million, supposing that the limit will be
+reached sometime around 2140 \citep{Ciaian2015}. As we already
+discussed the negative sides of limited supply (illiquidity and market
+inefficiency), we will mention now the bright side of this
+risk. Similar to commodities such as precious metals and natural gas,
+crypto-assets with limited supply attain high preference (subsequently
+high value), being regarded as ‘scare’ assets. By just looking at the
+price and market share of bitcoin, we can obviously observe that the
+investor’s choices show a specific preference for this coin. In this
+case, the financial behavior within this market is under the influence
+of ‘scarcity gives value’ idea \citep{Verhallen1982}. However, this
+idea of value can bring important investment costs, as investors
+putting their money into such assets, will consider asking for
+scarcity premiums on top of the existing ones for other risks
+\citep{Haase2013}.  By assessing the supply risk at crypto-market
+level, we state that the likelihood is medium.\\
+
+
+\textbf{Environmental risk.} Known as an energy-gourmet, Blockchain
+technology represents one of the key players in the fight towards the
+green transition \citep{Charles2019}. This type of risk concerns
+specifically the PoW Blockchains, which through their design, require
+high computational power and a lot of electricity, for functioning
+purposes. According to recent surveys, the bitcoin network is
+responsible for using about 0.2\% of the global electricity and
+emitting as much carbon dioxide emission as the country of Jordan
+\citep{Irfan2019}. Another important aspect to mention is the
+increasing number of ICOs, which require Ethereum Blockchain (PoW
+based) for their smart contract application. According to the current
+statistics, there are over three hundred thousand ether derived
+crypto-assets (both active and non-active\footnote{tokens from former
+  ICOs.} tokens) \citep{CryptoSlate.com2020}. We believe that the
+technological constraints regarding the electricity consumption should
+receive priority consideration; perhaps very soon, the success of ICO
+projects and the performance of businesses (using Blockchain
+technology), will be influenced by the environmental
+considerations. In the light of current environmental context, there
+were many attempts to reduce the costs and unnecessary pollution,
+although no significant progress was made so far \citep{Lasla2020,
+  Saleh2021, Bentov2016, Lepore2020}. The emergence of mining pools,
+the use of renewable energy (74\% of the used electricity is
+renewable) and lightning network, the emergence of platforms for
+renting mining power (e.g. Nicehash), first step towards a greener
+crypto world. Although, we know that there is a long road until we
+reach the point of zero-emission power \citep{Irfan2019}. A solution
+to stimulate a rapid transition to eco-friendly Blockchains, could be
+the implementation of a tax regime relative to the amount of energy
+consumed or to the units of carbon emitted per transaction. In this
+way, the crypto industry could become more aware of its environmental
+impact, contribute to the domestic economy and hopefully, make an
+effort to find the best alternative for both the ecosystem and
+business \citep{Mecca2019, Goodkind2020}. Simultaneously, with the
+increasing sensitivity of investors to social responsibility of their
+investment \citep{Brown-Liburd2015}, the assets showing negative
+environmental externalities may be submitted to boycott from
+investors. The environmental risk thus translates into a financial
+risk.
+
+
+\underline{Likelihood:} We know that during specific economic
+conditions (pandemics, financial crisis, war, etc.) the stability of
+financial markets can be highly affected. At the same time, as we
+learn from the past events, such as the 2008 financial crisis or COVID
+pandemics, the most performant and least risky investments were the
+socially responsible ones \citep{Lins2017, Singh2020,
+  Palma-Ruiz2020}. Well-informed market players have concerns
+regarding the enterprise risk management, financial performance and
+considerations for the surrounding environments \citep{Ballou2006}. As
+a strategy to decrease the risk exposure and make safer ‘investment
+bets’, investors pay careful attention at what kind of assets they put
+money in and make more socially responsible investments.
+
+
+Once with the creation of crypto-derivatives and tokenized securities,
+we can consider that the first step towards a convergence between
+crypto world and traditional markets was done. Crypto derivatives can
+now be traded on both exchange platforms and OTC market
+\citep{DeribitInsights2020}. Brokers can switch from securities to
+crypto-assets, or trade both. Regarding investment preferences, it was
+noticed that during turbulent periods and for safety considerations,
+investors tend to choose financial markets in the favor of
+crypto-market \citep{Matkovskyy2019}. Taking into account the
+investors preference for ‘safety bets’ and concerns about
+environmental and social implications, we believe that a more
+ecologically oriented Blockchain could significantly change the
+overall ‘safety’ perception. If this kind of risk doesn’t have direct
+financial losses, it impacts the investment profitability, increasing
+the costs\footnote{E.g. A company issuing ICO projects, can be
+  directly affected by the investors’ social considerations, which
+  will reflect in the amount of funds raised or the price/value of
+  their crypto-assets (lower)} for financing. As time passes,
+investors give more attention to the crypto-market, therefore we
+consider that for the moment the likelihood is Medium. At the same
+time, we would like to mention that there are big chances that the
+likelihood becomes high, if from technological point of view nothing
+changes. \\
+
 
 A summary of all financial risks discussed above will be presented in Table \ref{fin}.
 
- 
+
 
 
 \begin{table}[h!]
@@ -368,93 +1015,173 @@ A summary of all financial risks discussed above will be presented in Table \ref
 \setlength{\tabcolsep}{1pt}
 \begin{tabulary}{\linewidth}{|c|L|L|c|}
 \hline
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 \textbf{Risk}                                                                              & \textbf{Trigger}                                                                       & \textbf{Influence /  Consequences}                                                                        & \textbf{Likelihood}                              \\
 \hline
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 \multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}}                                             & \textit{Cyber-attacks}                                                                 & \textit{•          Big loses for investors.}                                                              & \cellcolor[HTML]{EFEFEF}                         \\
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 \multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}}                                             & \textit{Technological risks}                                                           & \textit{•          A sign that the market is not stable and mature}                                       & \cellcolor[HTML]{EFEFEF}                         \\
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 \multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}}                                             & \textit{Regulatory mismatches}                                                         & \textit{•          Crypto assets trade with a risk premium relative to the risk they may incur}           & \cellcolor[HTML]{EFEFEF}                         \\
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 \multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}}                                             & \textit{Human behavior}                                                                & \textit{}                                                                                                 & \cellcolor[HTML]{EFEFEF}                         \\
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 \multicolumn{1}{|c|}{\multirow{-5}{*}{\cellcolor[HTML]{EFEFEF}\textbf{Total market risk}}} & \textit{Reputation}                                                                    & \textit{}                                                                                                 & \multirow{-5}{*}{\cellcolor[HTML]{EFEFEF}High}   \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 \cellcolor[HTML]{FFFFFF}                                                                   & \textit{Lack of available information (e.g. white / yellow papers, inconsistent data)} & \textit{•          Financial loses for uninformed investors.}                                             & \cellcolor[HTML]{FFFFFF}                         \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 \cellcolor[HTML]{FFFFFF}                                                                   & \textit{Lack of knowledge/ understanding}                                              & \textit{•          Assets trade at prices far from their fundamental value}                               & \cellcolor[HTML]{FFFFFF}                         \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 \multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Information risk}}                        & \textit{Reputation}                                                                    & \textit{}                                                                                                 & \multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}High}   \\
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 \cellcolor[HTML]{EFEFEF}                                                                   & \textit{Regulatory mismatches}                                                         & \textit{•          Less investors}                                                                        & \cellcolor[HTML]{EFEFEF}                         \\
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 \multirow{-2}{*}{\cellcolor[HTML]{EFEFEF}\textbf{Liquidity risk}}                          & \textit{Reputation}                                                                    & \textit{•          Less efficient market}                                                                 & \multirow{-2}{*}{\cellcolor[HTML]{EFEFEF}Medium} \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 \cellcolor[HTML]{FFFFFF}                                                                   & \textit{Technological issue (supply limits)}                                           & \textit{•          Deflation, which can be a problem if crypto-assets will work as a method of payment}   & \cellcolor[HTML]{FFFFFF}                         \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 \cellcolor[HTML]{FFFFFF}                                                                   & \textit{Cyber- attacks}                                                                & \textit{•          Less efficient market}                                                                 & \cellcolor[HTML]{FFFFFF}                         \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 \multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Supply risk}}                             & \textit{Loss of cryptographic keys}                                                    & \textit{}                                                                                                 & \multirow{-3}{*}{\cellcolor[HTML]{FFFFFF}Medium} \\
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 \cellcolor[HTML]{EFEFEF}                                                                   & \textit{Technological issue (PoW)}                                                     & \textit{•          Damage for the environment}                                                            & \cellcolor[HTML]{EFEFEF}                         \\
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 \cellcolor[HTML]{EFEFEF}                                                                   & \textit{Reputation}                                                                    & \textit{•          Crypto assets trade with a risk premium relative to their environmental externalities} & \cellcolor[HTML]{EFEFEF}                         \\
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 \multirow{-3}{*}{\cellcolor[HTML]{EFEFEF}\textbf{Environmental risk}}                      & \textit{Lack of regulation}                                                            & \textit{}                                                                                                 & \multirow{-3}{*}{\cellcolor[HTML]{EFEFEF}Medium}\\
 \hline
 \end{tabulary}
-\end{table} 
- 
- 
- 
+\end{table}
+
+
+
 \section{Data analysis}
 
-In line with the literature review done in the previous sections, here we are going to provide an example of how financial risk is linked to technological vulnerabilities. More specifically, we are going to assess if bitcoin’s volatility is affected by the events targeting the crypto-market. This data analysis is an illustration that complements the literature survey performed in this paper, without any intention to transform it in an empirical study. In accordance with the literature and with the aim to answer to our research question, we establish the following hypotheses:\\
+In line with the literature review done in the previous sections, here
+we are going to provide an example of how financial risk is linked to
+technological vulnerabilities. More specifically, we are going to
+assess if bitcoin’s volatility is affected by the events targeting the
+crypto-market. This data analysis is an illustration that complements
+the literature survey performed in this paper, without any intention
+to transform it in an empirical study. In accordance with the
+literature and with the aim to answer to our research question, we
+establish the following hypotheses:\\
+
 
 \noindent \textbf{H1:Bitcoin’s volatility is positively linked to the number of events targeting the crypto-market.} \\
 \noindent \textbf{H2: Bitcoin’s volatility is positively linked to the amounts lost due to these events targeting the crypto-market.}
-\\ 
-We retrieved bitcoin prices from Thomson Reuters Eikon database and the list of events targeting bitcoin has been taken from \cite{Biais2020}. Many other researchers have used the same Eikon database, among which we mention: \cite{Corbet2020, Aliu2020, Akyildirim2020} etc. In total, our dataset comprises 53 events (see table \ref{events}), and the bitcoin’s historical price starts from August 2011 to September 2021.\\
+\\
+We retrieved bitcoin prices from Thomson Reuters Eikon database and
+the list of events targeting bitcoin has been taken from
+\cite{Biais2020}. Many other researchers have used the same Eikon
+database, among which we mention: \cite{Corbet2020, Aliu2020,
+  Akyildirim2020} etc. In total, our dataset comprises 53 events (see
+table \ref{events}), and the bitcoin’s historical price starts from
+August 2011 to September 2021.\\
 
-In order to verify whether technological events have an influence on the perceived risk of cryptocurrencies, we investigate the relationship between bitcoin’s volatility and the attacks on bitcoin. We check for the relationship between the volatility and the number of events, as well as for the one between volatility and the amount (in term of bitcoin) lost in each event. Volatility is widely regarded as a signal for risk in finance. Hence, we are looking for a relationship between technological events (attacks) and financial risk (volatility). 
 
-In the following section we are going to compute volatility using standard deviation method. Our choice is justified by the scope of this analysis: to demonstrate that there is a relationship between bitcoin’s volatility and our events. The rationale behind choosing these events as a proof of technological vulnerability is the following: most of these events are attacks that were possible thanks to the characteristics of this market. By the characteristics of this market, we mean:
+In order to verify whether technological events have an influence on
+the perceived risk of cryptocurrencies, we investigate the
+relationship between bitcoin’s volatility and the attacks on
+bitcoin. We check for the relationship between the volatility and the
+number of events, as well as for the one between volatility and the
+amount (in term of bitcoin) lost in each event. Volatility is widely
+regarded as a signal for risk in finance. Hence, we are looking for a
+relationship between technological events (attacks) and financial risk
+(volatility).
+
+
+In the following section we are going to compute volatility using
+standard deviation method. Our choice is justified by the scope of
+this analysis: to demonstrate that there is a relationship between
+bitcoin’s volatility and our events. The rationale behind choosing
+these events as a proof of technological vulnerability is the
+following: most of these events are attacks that were possible thanks
+to the characteristics of this market. By the characteristics of this
+market, we mean:
+
 
 \begin{itemize}
-\item Cryptocurrencies represent a virtual currency; they exist and operate just in the online environment. This makes them the target of cyberattacks that exploit any possible vulnerability of this technology.
-\item Cryptocurrencies’ users need cryptographic keys in order to access their funds or to place transactions. These keys easily become the source of attacks, when they are not kept safely or the code is easy to break.
-\item The identity protection (anonymity) offered by the Blockchain technology attracted many enthusiasts, however, this feature makes it almost impossible to catch the hackers / thieves. 
-\item The insufficient regulation and incertitude around cryptocurrency world made them the perfect tool for the black markets; these ones being also the few places accepting cryptocurrencies as a payment. 
-\item Blockchain literacy is slowly increasing. Along the time, the lack of proper understanding about how this crypto world works, was exploited in many forms in order to trick the users and steal their coins. An example would be the many scams performed by crypto-exchange platforms.
-\item Blockchain is a decentralized technology and its transactions are immutable. That makes it impossible to reverse fraudulent transactions or recuperate the stolen funds. This characteristic together with the anonymity feature may incite malevolent actors to execute their plans.
+\item Cryptocurrencies represent a virtual currency; they exist and
+operate just in the online environment. This makes them the target of
+cyberattacks that exploit any possible vulnerability of this
+technology.
+\item Cryptocurrencies’ users need cryptographic keys in order to
+access their funds or to place transactions. These keys easily become
+the source of attacks, when they are not kept safely or the code is
+easy to break.
+\item The identity protection (anonymity) offered by the Blockchain
+technology attracted many enthusiasts, however, this feature makes it
+almost impossible to catch the hackers / thieves.
+\item The insufficient regulation and incertitude around
+cryptocurrency world made them the perfect tool for the black markets;
+these ones being also the few places accepting cryptocurrencies as a
+payment.
+\item Blockchain literacy is slowly increasing. Along the time, the
+lack of proper understanding about how this crypto world works, was
+exploited in many forms in order to trick the users and steal their
+coins. An example would be the many scams performed by crypto-exchange
+platforms.
+\item Blockchain is a decentralized technology and its transactions
+are immutable. That makes it impossible to reverse fraudulent
+transactions or recuperate the stolen funds. This characteristic
+together with the anonymity feature may incite malevolent actors to
+execute their plans.
 \end{itemize}
 
 We compute the monthly standard deviation of bitcoin’s returns as:
 
-$$ \sigma = \sqrt{\frac{(R - \mu)^2}{n}}$$ 
+$$ \sigma = \sqrt{\frac{(R - \mu)^2}{n}}$$
 
 Where, R are bitcoin returns, $\mu$ is the average return and n is the number of days of the window considered. Accordingly with our hypotheses, we perform the following linear regression:
  $$ \sigma = \alpha + \beta * EVENT_{number} + \epsilon   $$
  $$ \sigma = \alpha + \beta * EVENT_{amount} + \epsilon   $$
 
-Where, $EVENT_{number}$ is is the variable representing the monthly volume of events targeting bitcoin and $EVENT_{amount}$ is the monthly amounts lost, in bitcoins, due to these events.\\
-
-The first regression checks if there is a relationship between the monthly volatility of bitcoin and the number of events per month. The results obtained are significant, with a p value of 0.0216. We therefore conclude that our sample data provided enough evidence to reject the null hypothesis; these results show that there is a relationship between the monthly volatility of bitcoin and the number of events targeting it. Detailed results are shown in appendix section, table \ref{reg1}.
-
-
-In the second regression, we test if there is a relationship between the volatility level of bitcoin and the amount (in terms of bitcoin) lost as a result of these events. The amounts have been aggregated on monthly basis. The result obtained (p value of 0.66) show that there is no relationship between the volatility and the amounts lost. Detailed results are shown in appendix section, table \ref{reg2}.
+Where, $EVENT_{number}$ is is the variable representing the monthly
+volume of events targeting bitcoin and $EVENT_{amount}$ is the monthly
+amounts lost, in bitcoins, due to these events.\\
 
 
-Furthermore, we measure the relationship degree between the volatility and the number of events, using Pearson test and Spearman’s rank correlation. Pearson, also known as a parametric correlation test, is one of the most common methods used in assessing the degree of relationship between two linearly related variables \citep{Pearson1932}. Spearman rho (a non-parametric test) measures the degree of association between two variables \citep{Spearman1904}. Both tests confirmed that bitcoin’s volatility is correlated with the number of events. The results can be seen in the bellow table \ref{correlation}.
+The first regression checks if there is a relationship between the
+monthly volatility of bitcoin and the number of events per month. The
+results obtained are significant, with a p value of 0.0216. We
+therefore conclude that our sample data provided enough evidence to
+reject the null hypothesis; these results show that there is a
+relationship between the monthly volatility of bitcoin and the number
+of events targeting it. Detailed results are shown in appendix
+section, table \ref{reg1}.
+
+
+
+In the second regression, we test if there is a relationship between
+the volatility level of bitcoin and the amount (in terms of bitcoin)
+lost as a result of these events. The amounts have been aggregated on
+monthly basis. The result obtained (p value of 0.66) show that there
+is no relationship between the volatility and the amounts
+lost. Detailed results are shown in appendix section, table
+\ref{reg2}.
+
+
+
+Furthermore, we measure the relationship degree between the volatility
+and the number of events, using Pearson test and Spearman’s rank
+correlation. Pearson, also known as a parametric correlation test, is
+one of the most common methods used in assessing the degree of
+relationship between two linearly related variables
+\citep{Pearson1932}. Spearman rho (a non-parametric test) measures the
+degree of association between two variables \citep{Spearman1904}. Both
+tests confirmed that bitcoin’s volatility is correlated with the
+number of events. The results can be seen in the bellow table
+\ref{correlation}.
+
 
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{||c c c c||} 
+\begin{tabular}{||c c c c||}
  \hline
-\textbf{Test} & \textbf{p-value} & \textbf{Correlation estimates} & \textbf{Interpretation}  \\ [0.5ex] 
+\textbf{Test} & \textbf{p-value} & \textbf{Correlation estimates} & \textbf{Interpretation}  \\ [0.5ex]
  \hline
  \textbf{Pearson} & 0.02156 & 0.4402268 & Moderate positive correlation \\
 \hline
@@ -464,26 +1191,130 @@ Furthermore, we measure the relationship degree between the volatility and the n
 \caption{\label{correlation}\textbf{Correlation tests for \em{the volatility versus number of events}}\\ \footnotesize{\textit{The p-values resulted from the correlation tests are less than the significance level alpha = 0.05. We can conclude that the monthly volatility of bitcoin and the number of events targeting it, are moderately correlated with correlation coefficients of 0.44 and 0.40.}}}
 \end{table}
 
-It is interesting to observe that according to our analysis, the volatility of bitcoin is not influenced by the financial losses inquired by the users of bitcoin, but rather by the number of attacks, scams or other negative events targeting this market. This result proves that the participants from the crypto-market are more sensitive to cybersecurity risks than financial ones. A way to justify this would be the discrepancy between the users’ expectations versus reality. Blockchain technology was created with the purpose to offer a more secure and transparent alternative to the existing payment tools. However, that doesn’t make it immune to cyberattacks and scams. At the same time, we argue that Blockchain illiteracy may have a big implication in how crypto-market players behave. 
+It is interesting to observe that according to our analysis, the
+volatility of bitcoin is not influenced by the financial losses
+inquired by the users of bitcoin, but rather by the number of attacks,
+scams or other negative events targeting this market. This result
+proves that the participants from the crypto-market are more sensitive
+to cybersecurity risks than financial ones. A way to justify this
+would be the discrepancy between the users’ expectations versus
+reality. Blockchain technology was created with the purpose to offer a
+more secure and transparent alternative to the existing payment
+tools. However, that doesn’t make it immune to cyberattacks and
+scams. At the same time, we argue that Blockchain illiteracy may have
+a big implication in how crypto-market players behave.
+
 
 
 \section{Conclusion}
 
-The crypto-market emerged in 2008, together with the first cryptocurrency created, bitcoin. Since then, Blockchain technology evolved, potentially disrupting many fields beyond finance. However, it is still in infancy compared to its promised future, the crypto-market has to overcome its many challenges. We believe that understanding and analyzing the crypto-market vulnerabilities, represents the first step in overcoming its challenges. \\
-In this paper we perform a literature survey focusing the types of risks present in the crypto-market. Our focus is on the technological and financial risks of crypto-market and Blockchain technology. First, we show that these risks can be related and that during specific market conditions, they can become a trigger one for another. From our knowledge, this is the first study showing that financial risks can be triggered by the technological vulnerabilities of Blockchain. Second, we offer a way to determine the likelihood of triggering financial risks through technological vulnerabilities. Here, we also emphasize the role played by financial behavior, social responsibility and Blockchain literacy in the stability of crypto-market. Furthermore, to complete this study, we perform a short data analysis, demonstrating that cryptocurrencies’ price stability can be disrupted by technological vulnerabilities characteristic to this market. More research is needed on this matter, however, with the little data available, we could show that the bitcoin’s volatility level is influenced by the number of events targeting it. These evidences show the implication of cybersecurity risks and Blockchain illiteracy in the crypto-market players’ behavior. \\
-Our results support the general discussion from this literature survey, while at the same time answer to our initial research question: ‘Can financial risks be triggered by technological vulnerabilities of Blockchain technology?’. 
-The empirical illustration provided in this article cannot be fully considered as an empirical proof. This is mostly due to the size of our database. Broadly speaking, information related to crypto-market is spread all over the internet, making it complicated when it comes to data collection and research. Up to this point in time, there is no official or centralized database with attacks performed in the crypto-market, but rather a collection of mini statistics. On account of this, our limitation is reducing the possibility to perform empirical studies and accurately assess certain risks.\\ 
-Finally, we conclude this survey with some research directions, in an attempt to bridge a part of the existent literature gaps: 
+The crypto-market emerged in 2008, together with the first
+cryptocurrency created, bitcoin. Since then, Blockchain technology
+evolved, potentially disrupting many fields beyond finance. However,
+it is still in infancy compared to its promised future, the
+crypto-market has to overcome its many challenges. We believe that
+understanding and analyzing the crypto-market vulnerabilities,
+represents the first step in overcoming its challenges. \\
+In this paper we perform a literature survey focusing the types of
+risks present in the crypto-market. Our focus is on the technological
+and financial risks of crypto-market and Blockchain technology. First,
+we show that these risks can be related and that during specific
+market conditions, they can become a trigger one for another. From our
+knowledge, this is the first study showing that financial risks can be
+triggered by the technological vulnerabilities of Blockchain. Second,
+we offer a way to determine the likelihood of triggering financial
+risks through technological vulnerabilities. Here, we also emphasize
+the role played by financial behavior, social responsibility and
+Blockchain literacy in the stability of crypto-market. Furthermore, to
+complete this study, we perform a short data analysis, demonstrating
+that cryptocurrencies’ price stability can be disrupted by
+technological vulnerabilities characteristic to this market. More
+research is needed on this matter, however, with the little data
+available, we could show that the bitcoin’s volatility level is
+influenced by the number of events targeting it. These evidences show
+the implication of cybersecurity risks and Blockchain illiteracy in
+the crypto-market players’ behavior. \\
+Our results support the general discussion from this literature
+survey, while at the same time answer to our initial research
+question: ‘Can financial risks be triggered by technological
+vulnerabilities of Blockchain technology?’.
+The empirical illustration provided in this article cannot be fully
+considered as an empirical proof. This is mostly due to the size of
+our database. Broadly speaking, information related to crypto-market
+is spread all over the internet, making it complicated when it comes
+to data collection and research. Up to this point in time, there is no
+official or centralized database with attacks performed in the
+crypto-market, but rather a collection of mini statistics. On account
+of this, our limitation is reducing the possibility to perform
+empirical studies and accurately assess certain risks.\\
+Finally, we conclude this survey with some research directions, in an
+attempt to bridge a part of the existent literature gaps:
 
 \begin{enumerate}
-   \item There is need for more research to increase the Blockchain literacy. In spite of the growing interest in the crypto-market, practitioners are still challenged to transfer the Blockchain concept to market-oriented applications. General confidence in this new technology is often shattered by the negative news, scams or attacks targeting this market. With their special features and exponential price changes, cryptocurrencies attract the attention of the large public, including investors, researchers, regulators or hackers. We believe that an increased knowledge and understanding about these innovative technologies will better serve the participants within the crypto-market in making informed decisions; last but not least, it will help this market to evolve towards achieving its full potential.
-    \item Despite the growing number of empirical papers about crypto-market, we still lack the theory development in this field. With our study, we show that using the existing finance theories is insufficient if the technological characteristics of this market are not taken into consideration. Blockchain technology is not just a new tool; it represents a new way of doing business, a new operational system. Therefore, there is a need of more cross-disciplinary research, that will take into account the important functions and implications of this technology (finance, regulation, cybersecurity, management, etc.).  
-     \item In recent years, there has been a growing awareness of climate change and environmental issues. Knowing that PoW cryptocurrencies represent a threat for our planet health, this subject needs more attention from both practitioners and academics. Investors represent an important group of stakeholders in the crypto-market. Before selecting their preferred investable assets, investors pay now more attention to their options and generally adopt the ESG\footnote{Environmental, Social, and Governance conscientiousness.} evaluation criterion. With the ongoing pandemic and the continuous expansion of crypto-market, mainly based on PoW technology, we think that there is an urgent need of research addressing this challenge. 
-     \item In the course of the past decade, Blockchain has evolved while proving its capacity to disrupt various business sectors. Starting with an already complicated technology, namely cryptocurrencies, Blockchain development achieved high levels of both performance and complexity. Innovations such as ICO or DeFi\footnote{Decentralized finance} projects are built on stacks of complicated technologies, with each layer carrying an important amount of (attack) risk. With that in mind, we argue that literature should address more the vulnerabilities and risks of this market; more specifically, the ones concerning other Blockchains then bitcoin. An assessment of the risks and vulnerabilities of the crypto-market as a whole, could prevent investors from unnecessary loses, diminish the number of low-quality products and increase performance and efficiency overall.
-     \item As a decentralized system by design, Blockchain technology is not managed by any central authority but by its own algorithm, \textit{the code is law}. This leaves the duty of legal and international regulatory supervision in the hands of the specialists from governments and industries. The only real progress in this direction started just in the beginning of 2017 \citep{BotoS2017}. Knowing that a big part of the vulnerabilities discussed in this survey would have not been possible if proper regulation was in place, we also consider this an area of further research.  
+   \item There is need for more research to increase the Blockchain
+literacy. In spite of the growing interest in the crypto-market,
+practitioners are still challenged to transfer the Blockchain concept
+to market-oriented applications. General confidence in this new
+technology is often shattered by the negative news, scams or attacks
+targeting this market. With their special features and exponential
+price changes, cryptocurrencies attract the attention of the large
+public, including investors, researchers, regulators or hackers. We
+believe that an increased knowledge and understanding about these
+innovative technologies will better serve the participants within the
+crypto-market in making informed decisions; last but not least, it
+will help this market to evolve towards achieving its full potential.
+    \item Despite the growing number of empirical papers about
+crypto-market, we still lack the theory development in this
+field. With our study, we show that using the existing finance
+theories is insufficient if the technological characteristics of this
+market are not taken into consideration. Blockchain technology is not
+just a new tool; it represents a new way of doing business, a new
+operational system. Therefore, there is a need of more
+cross-disciplinary research, that will take into account the important
+functions and implications of this technology (finance, regulation,
+cybersecurity, management, etc.).
+     \item In recent years, there has been a growing awareness of
+climate change and environmental issues. Knowing that PoW
+cryptocurrencies represent a threat for our planet health, this
+subject needs more attention from both practitioners and
+academics. Investors represent an important group of stakeholders in
+the crypto-market. Before selecting their preferred investable assets,
+investors pay now more attention to their options and generally adopt
+the ESG\footnote{Environmental, Social, and Governance
+conscientiousness.} evaluation criterion. With the ongoing pandemic
+and the continuous expansion of crypto-market, mainly based on PoW
+technology, we think that there is an urgent need of research
+addressing this challenge.
+     \item In the course of the past decade, Blockchain has evolved
+while proving its capacity to disrupt various business
+sectors. Starting with an already complicated technology, namely
+cryptocurrencies, Blockchain development achieved high levels of both
+performance and complexity. Innovations such as ICO or
+DeFi\footnote{Decentralized finance} projects are built on stacks of
+complicated technologies, with each layer carrying an important amount
+of (attack) risk. With that in mind, we argue that literature should
+address more the vulnerabilities and risks of this market; more
+specifically, the ones concerning other Blockchains then bitcoin. An
+assessment of the risks and vulnerabilities of the crypto-market as a
+whole, could prevent investors from unnecessary loses, diminish the
+number of low-quality products and increase performance and efficiency
+overall.
+     \item As a decentralized system by design, Blockchain technology
+is not managed by any central authority but by its own algorithm,
+\textit{the code is law}. This leaves the duty of legal and
+international regulatory supervision in the hands of the specialists
+from governments and industries. The only real progress in this
+direction started just in the beginning of 2017
+\citep{BotoS2017}. Knowing that a big part of the vulnerabilities
+discussed in this survey would have not been possible if proper
+regulation was in place, we also consider this an area of further
+research.
   \end{enumerate}
 
-Overall, we think this analysis will not only be useful to the existing participants but also to those considering to enter this market, them being practitioners or academics. \\
+Overall, we think this analysis will not only be useful to the
+existing participants but also to those considering to enter this
+market, them being practitioners or academics. \\
+
 
 \pagebreak
 \bibliography{library}
@@ -510,7 +1341,7 @@ Overall, we think this analysis will not only be useful to the existing particip
 \textbf{Model}           &                  & \textbf{Estimate}    & \multicolumn{1}{c}{\textbf{Std. Error}}           & \textbf{t}        & \multicolumn{1}{c}{\textbf{p-value}}    \\
 $H_{1}$                  & (Intercept)      & 0.077                & \multicolumn{1}{c}{0.11783}                       & 0.657             & \multicolumn{1}{c}{0.517} \\
                          & $EVENT_{number}$ & 0.18761              & \multicolumn{1}{c}{0.07653}                       & 2.451             & \multicolumn{1}{c}{0.0216*}  \\
-\hline                             
+\hline
 \end{tabulary}
 \\
 \footnotesize{\textit{The \textbf{p-value} obtained from this regression is 0.0216*. This result is significant and is less than the significance level alpha: 0.05. We can therefore conclude that there is a relationship between the monthly volatility and the number of events targeting bitcoin.}}
@@ -534,7 +1365,7 @@ $H_{1}$                  & (Intercept)      & 0.077                & \multicolum
 \textbf{Coefficients:}        & \multicolumn{5}{l}{}                                                                                                          \\
 \textbf{Model}       &                     & \textbf{Estimate}    & \multicolumn{1}{c}{\textbf{Std. Error}} & \textbf{t} & \multicolumn{1}{c}{\textbf{p-value}} \\
 $H_{1}$              & (Intercept)         & 3.34E-01             & \multicolumn{1}{c}{5.57E-02}            & 5.992      & \multicolumn{1}{c}{2.95e-06 ***}    \\
-                     & $EVENT_{amount}$    & 1.64E-07             & \multicolumn{1}{c}{3.68E-07}            & 0.444      &\multicolumn{1}{c}{ 0.661} \\       
+                     & $EVENT_{amount}$    & 1.64E-07             & \multicolumn{1}{c}{3.68E-07}            & 0.444      &\multicolumn{1}{c}{ 0.661} \\
 \hline
 \end{tabulary}
 \footnotesize{\textit{The \textbf{p-value} obtained from this regression is 0.661. This result is higher than the significance level alpha: 0.05. Therefore, we conclude that there is no relationship between the monthly volatility of bitcoin and the amounts lost during the events targeting bitcoin.}}
@@ -542,120 +1373,120 @@ $H_{1}$              & (Intercept)         & 3.34E-01             & \multicolumn
 
 
 
- 
+
 \begin{table}[ht]
 \centering
 \caption{\label{events} \textbf{Hacks, thefts and losses events related to Bitcoin} \\ \footnotesize{\textit{Source: \citep{Biais2020}}} }
 \small
 \setlength{\tabcolsep}{1pt}
 \begin{tabular}{c|c|c}
-\rowcolor[HTML]{EFEFEF} 
+\rowcolor[HTML]{EFEFEF}
 \textbf{Date} & \textbf{Amount loss (BTC)} & \textbf{Description}                            \\ \hline
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 6/13/2011     & 25,000                     & Early user Allinvain was   hacked               \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 6/19/2011     & 2,000                      & MtGox theft - compromised   account             \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 6/25/2011     & 4,019                      & \textit{MyBitcoin theft   - wallet keys hacked} \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 7/26/2011     & 17,000                     & \textit{Bitomat loss - Wallet access   lost}    \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 7/29/2011 & 78,739 & \textit{MyBitcoin theft - wallet website   hacked}                                \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 10/6/2011     & 5,000                      & \textit{Bitcoin7 hack}                          \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 10/28/2011    & 2,609                      & \textit{MtGox loss due to hacking}              \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 3/1/2012      & 46,653                     & \textit{Linode hacks}                           \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 4/13/2012     & 3,171                      & \textit{Betcoin hack}                           \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 4/27/2012     & 20,000                     & \textit{Tony76 Silk Road scam}                  \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 5/11/2012     & 18,547                     & \textit{Bitcoinica hack}                        \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 7/4/2012      & 1,853                      & \textit{MtGox hack}                             \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 7/13/2012 & 40,000 & \textit{Bitcoinica theft - due to server   hack}                                  \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 7/17/2012     & 180,819                    & \textit{BST Ponzi scheme}                       \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 7/31/2012     & 4,500                      & \textit{BTC-e hack}                             \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 9/4/2012      & 24,086                     & \textit{Bitfloor theft - wallet keys   hacked}  \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 9/28/2012     & 9,222                      & \textit{User Cdecker hacked}                    \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 10/17/2012    & 3,500                      & \textit{Trojan horse}                           \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 12/21/2012    & 18,787                     & \textit{Bitmarket.eu hack}                      \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 5/10/2013     & 1,454                      & \textit{Vircurex hack}                          \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 6/10/2013     & 1,300                      & \textit{PicoStocks hack}                        \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 10/2/2013     & 29,655                     & \textit{FBI seizes Silk Road funds}             \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 10/25/2013    & 144,336                    & \textit{FBI seizes Silk Road funds}             \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 10/26/2013    & 22,000                     & \textit{GBL scam}                               \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 11/7/2013     & 4,100                      & \textit{Inputs.io hack}                         \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 11/12/2013    & 484                        & \textit{Bitcash.cz hack}                        \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 11/29/2013    & 5,400                      & \textit{Sheep Marketplace hacked \&   closes}   \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 11/29/2013    & 5,896                      & \textit{PicoStocks hack}                        \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 2/13/2014     & 4,400                      & \textit{Silk Road 2 hacked}                     \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 2/25/2014     & 744,408                    & \textit{MtGox collapse due to hacks   losses}   \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 3/4/2014      & 896                        & \textit{Flexcoin hack}                          \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 3/4/2014      & 97                         & \textit{Poloniex hack}                          \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 3/25/2014     & 950                        & \textit{CryptoRush hacked}                      \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 10/14/2014    & 3,894                      & \textit{Mintpal hack}                           \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 1/5/2015      & 18,886                     & \textit{Bitstamp hack}                          \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 1/28/2015     & 1,000                      & \textit{796Exchange hack}                       \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 2/15/2015     & 7,170                      & \textit{BTER hack}                              \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 2/17/2015     & 3,000                      & \textit{KipCoin hack}                           \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 5/22/2015     & 1,581                      & \textit{Bitfiniex hack}                         \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 9/15/2015 & 5,000  & \textit{BitPay phishing scam - hacker   takes over the CEO's accounts and access} \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 1/15/2016     & 11,325                     & \textit{Cryptsy hack}                           \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 4/7/2016      & 315                        & \textit{ShapeShift hack}                        \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 4/13/2016     & 154                        & \textit{ShapeShift hack}                        \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 5/14/2016     & 250                        & \textit{Gatecoin hack}                          \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 8/2/2016      & 119,756                    & \textit{Bitfinex hack}                          \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 10/13/2016    & 2,300                      & \textit{Bitcurex hack}                          \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 4/22/2017     & 3,816                      & \textit{Yapizon hack}                           \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 7/12/2017     & 1,942                      & \textit{AlphaBay admins assets sized by   FBI}  \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 7/20/2017     & 1,200                      & \textit{Hansas funds seized by Dutch   police}  \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 12/6/2017     & 4,736                      & \textit{NiceHash hacked}                        \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 6/20/2018     & 2,016                      & \textit{Bithumb hacked}                         \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 9/20/2018     & 5,966                      & \textit{Zaif hacked}                            \\
-\rowcolor[HTML]{FFFFFF} 
+\rowcolor[HTML]{FFFFFF}
 10/28/2018    & 8                          & \textit{MapleChange hack / scam}               \\
 \hline
 \end{tabular}
