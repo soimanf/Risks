@@ -488,7 +488,7 @@ A summary of all technological risks discussed above will be presented in Table 
 
 \newcommand{\spheading}[2][10em]{% \spheading[<width>]{<stuff>}
   \rotatebox{90}{\parbox{#1}{\raggedright #2}}}
-
+\newcommand{\floatfootnote}[1]{\ifx\[$\else\footnote{#1}\fi} %$
 
 %\begin{landscape}
 \begin{sidewaystable}[htbp]
@@ -509,7 +509,7 @@ A summary of all technological risks discussed above will be presented in Table 
  {{\cellcolor[HTML]{EFEFEF}\textbf{Nothing   at stake attack}}} &
  {\cellcolor[HTML]{EFEFEF}\textit{· Manipulates the system by entering
      invalid data  \mbox{· Monopolized consensus process}}} &
-  {{\cellcolor[HTML]{EFEFEF}\textit{Blockchains using PoS (over 350 cryptocurrencies\footnote{The total number of cryptocurrencies is over 2200 \citep{CryptoSlate.com2020}}) source:\citep{CryptoSlate.com2020}}}}
+  {{\cellcolor[HTML]{EFEFEF}\textit{Blockchains using PoS (over 350 cryptocurrencies\floatfootnote{The total number of cryptocurrencies is over 2200 \citep{CryptoSlate.com2020}}) source:\citep{CryptoSlate.com2020}}}}
  \\
 &
   {\cellcolor[HTML]{FFFFFF}} &
@@ -526,7 +526,7 @@ A summary of all technological risks discussed above will be presented in Table 
  &
   {\cellcolor[HTML]{FFFFFF}} &
   {\cellcolor[HTML]{FFFFFF}\textit{· Forks the Blockchain}} &
-  {\multirow{-2}{*}{\cellcolor[HTML]{FFFFFF}\textit{Mining pools\footnote{The total number of mining pools is not known, as there are many which keep their identity secret. Therefore, we cannot accurately assess the market exposure with this respect.}}}} \\
+  {\multirow{-2}{*}{\cellcolor[HTML]{FFFFFF}\textit{Mining pools\floatfootnote{The total number of mining pools is not known, as there are many which keep their identity secret. Therefore, we cannot accurately assess the market exposure with this respect.}}}} \\
  &
   {\multirow{-5}{*}{\cellcolor[HTML]{FFFFFF}\textbf{Majority attack}}} &
   {\cellcolor[HTML]{FFFFFF}\textit{·          Performs other attacks (Eclipse, double spending, DoS)}} &
