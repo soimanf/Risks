@@ -151,8 +151,7 @@ rho1
 rho2<-cor.test(res2$vol,res2$number, method="spearman")
 rho2
 
-
-
+ 
 
 sample=read.xlsx('C:/Users/Florentina/Desktop/latex.xlsx' , sheet='aattacks')
 sample$Date = as.Date(sample$Date, origin= "1899-12-30") 
